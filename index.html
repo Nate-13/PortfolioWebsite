@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Borwick</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+    
+        <button onclick="toggleDarkMode()" id="btn-dark-mode">
+            <span class="material-symbols-outlined">dark_mode</span>
+        </button>  
+
+        <nav>
+            <div id="menu">
+                <a href="#" class="menu-item">HOME</a>
+                <a href="#projects" class="menu-item">PROJECTS</a>
+                <a href="" class="menu-item">ABOUT</a>
+                <a href="" class="menu-item">CONTACT</a>
+            </div>
+        </nav>
+
+        <nav>
+            <div class="mobile-menu" id="btn-mobile-menu">
+                <a href="#contact" class="hidden"><span class="material-symbols-outlined end">send</span></a>
+                <a href="#about" class="hidden"><span class="material-symbols-outlined">contact_page</span></a>
+                <a href="#projects" class="hidden"><span class="material-symbols-outlined">contract</span></a>
+                <a href="#" class="hidden"><span class="material-symbols-outlined">home</span></a>
+                <button class="hidden" onclick="toggleDarkMode()"><span class="material-symbols-outlined secondary dark">dark_mode</span></button>
+                <button onclick="toggleMobileMenu()" id="btn-mobile-menu"><span class="material-symbols-outlined secondary main">menu</span></button>
+            </div>
+        </nav>
+
+         <div id="header">
+            <div class="sun", id="sun"></div>
+            <div class="name-box" id="name-box">
+                <h3 class="dev-text">DEVELOPER AND DESIGNER</h3>
+                
+                <h1 class="name">NATHAN</h1>
+                <h1 class="name">BORWICK</h1>
+                <div class="name-gradient"></div>
+            </div>    
+        </div>
+ 
+    <div id="projects">
+        <!-- <h1 class="section-title">PROJECTS</h1> -->
+        <div class="container">
+            <div class="image-section">
+                <img src="mbtaimg.png" alt="MBTA App Concept">
+            </div>
+            <div class="text-section">
+                <h1 class="project-title">MBTA APP CONCEPT</h1>
+                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor aliqua. Ut enim consequat.</p>
+                <!-- <a href="" class="explore-button">
+                    EXPLORE <span class="material-symbols-outlined exp-arrow">arrow_outward</span>
+                </a>  -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="image-section">
+                <img src="website-mockup.png" alt="Portfolio Website">
+            </div>
+            <div class="text-section">
+                <h1 class="project-title">Portfolio Website</h1>
+                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor aliqua. Ut enim consequat.</p>
+                <!-- <a href="" class="explore-button">
+                    EXPLORE <span class="material-symbols-outlined exp-arrow">arrow_outward</span>
+                </a>  -->
+            </div>
+        </div>
+       
+
+    </div> 
+
+    <div id="about">
+        <!-- <h1 class="section-title">ABOUT</h1> -->
+    </div>
+   
+    
+
+    </div>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,7 +4,14 @@ const projects = document.getElementById("projects");
 
 // Sun Cursor Control
 
+function isMobile() {
+    return window.innerWidth <= 1000;
+}
+
 document.body.onpointermove = event => {
+
+    if (isMobile()) return;
+
     const { clientX, clientY } = event;
     const scrollX = window.pageXOffset;
     const scrollY = window.pageYOffset;
@@ -33,17 +40,7 @@ document.body.onpointermove = event => {
             filter: "blur(5vw)"
         }, {duration: 1000, fill: "forwards"});
     }
-
-    // Get projects section dimensions and position
-    const projectsRect = projects.getBoundingClientRect();
-
-    // Check if the cursor is within the projects section
-    if (
-        clientY >= projectsRect.top &&
-        clientY <= projectsRect.bottom &&
-        clientX >= projectsRect.left &&
-        clientX <= projectsRect.right
-    ) {
+    else{
         move.classList.add("projects-mode"); // Apply projects mode class
 
         // Adjust for scroll position
@@ -58,6 +55,7 @@ document.body.onpointermove = event => {
             filter: "blur(0px)" // Remove blur
         }, {duration: 1000, fill: "forwards"});
     }
+   
 };
 
 const darkMode = document.getElementById("btn-dark-mode");

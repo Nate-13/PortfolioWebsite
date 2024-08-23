@@ -145,27 +145,46 @@ body.dark-mode {
 }
 
 .section-title {
-    font-size: 16vw;
-    font-weight: normal;
+    font-size: 15vw;
+    font-weight: bold;
     color: #4D00FF;
     margin-bottom: 5vw;
     width: 100%;
     position: relative;
+    padding-left: 5vw;
+    animation: container-slide linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    transform: translateX(5%);
 }
 
-.section-title::before{
+.section-title.two::before{
     content: "";
     position: absolute;
-    width: 90%;
-    height: 2.5vw;
-    background-color: #FFC800;
-    bottom: 19%;
-    left: 0;
+    width: 15vw;
+    height: 10vw;
+    background: #FFC228;
+    bottom: 1.5vw;
+    left: 10vw;
     z-index: -1;
+    scale: 2;
+    animation: container-slide linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    transform: translateX(5%);
+}
+
+@keyframes appear{
+    from{
+        filter: blur(10px);
+    }
+    to{
+        filter: blur(0px);
+    }
 }
 
 .dark-mode .section-title::before{
-    background-color: #123CE7;
+    background-color: #123CE745;
 }
 
 
@@ -188,6 +207,18 @@ body.dark-mode {
     border: 1px solid #F3EEFF75;
     transition: all 0.5s ease;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    animation: container-slide linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes container-slide {
+    from {
+        transform: translateX(5%);
+        }
+    to {
+        transform: translateY(0);
+    }
 }
 
 
@@ -507,6 +538,10 @@ body.dark-mode {
     #header {
         padding-left: 1.5vw;
         padding-bottom: 30vw;
+    }
+
+    .section-title{
+        padding-left: 1.5vw;
     }
 
     #about{

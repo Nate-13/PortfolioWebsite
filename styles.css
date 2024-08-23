@@ -463,7 +463,40 @@ body.dark-mode {
     color: #FFC800;
 }
 
-
+#footer {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #4D00FF;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #footer h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #FFC800;
+    font-weight: normal;
+  }
+  
+  #footer div {
+    display: flex;
+    gap: 1rem;
+    margin-right: 70px;
+  }
+  
+  #footer a {
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.25rem; /* Adjust font size of the links */
+    color: #FFC800; /* Text color of links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  #footer a:hover {
+    color: #F3EEFF; /* Change color on hover */
+  }
+  
 
 /*MEDIA QUERIES*/
 

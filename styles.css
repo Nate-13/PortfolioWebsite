@@ -487,7 +487,7 @@ body.dark-mode {
   
   #footer a {
     text-decoration: none; /* Remove underline from links */
-    font-size: 1.25rem; /* Adjust font size of the links */
+    font-size: 1.5rem; /* Adjust font size of the links */
     color: #FFC800; /* Text color of links */
     transition: color 0.3s ease; /* Smooth transition for hover effect */
   }
@@ -496,6 +496,16 @@ body.dark-mode {
     color: #F3EEFF; /* Change color on hover */
   }
   
+  .dark-mode #footer {
+    background-color: #FFC800;
+  }
+  .dark-mode #footer h2 {
+    color: #123CE7;
+  }
+
+  .dark-mode #footer a {
+    color: #123CE7;
+  }
   
 .contact-container{
     display: flex;
@@ -514,6 +524,7 @@ body.dark-mode {
     font-weight: bold;
     line-height: 9vw;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .dark-mode .contact-container a{
@@ -558,6 +569,76 @@ body.dark-mode {
 
 .link-three{
     transform: translateX(9.5vw);
+}
+
+.button-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 0px 5%;
+    height: 3rem;
+    background-color: #4D00FF;
+    color: #F3EEFF;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3vw;
+    transition: all 0.3s ease;
+    margin-right: 1vw;
+    border: none;
+    box-shadow: 0 0 0 #4D00FF;
+    animation: pulse 2s infinite;
+}
+
+.resume:hover{
+    background-color: #FFC800;
+    animation: paused;
+    scale: ;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #4D00FF50;
+    }
+    70% {
+        box-shadow: 0 0 0 20px #4D00FF00;
+    }
+    100% {
+        box-shadow: 0 0 0 0 #4D00FF00;
+    }
+}
+
+.dark-mode .resume{
+    background-color: #FFC800;
+    color: #1E0640;
+    box-shadow: 0 0 0 #FFC800;
+    animation: pulsedark 2s infinite;
+}
+
+.dark-mode .resume:hover{
+    background-color: #123CE7;
+    animation: paused;
+}
+
+@keyframes pulsedark {
+    0% {
+        box-shadow: 0 0 0 0 #FFC80075;
+    }
+    70% {
+        box-shadow: 0 0 0 20px #FFC80000;
+    }
+    100% {
+        box-shadow: 0 0 0 0 #FFC80000;
+    }
 }
 
 
@@ -738,5 +819,11 @@ body.dark-mode {
     .mobile-menu button.hidden {
         display: none;
     }
-}
 
+    .resume{
+        padding: 0px, 7.5%;
+        font-size: 2.5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+    }
+}

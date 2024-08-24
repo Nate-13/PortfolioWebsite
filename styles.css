@@ -155,7 +155,6 @@ body.dark-mode {
     animation: container-slide linear forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
-    transform: translateX(5%);
 }
 
 .section-title.two::before{
@@ -217,7 +216,7 @@ body.dark-mode {
         transform: translateX(5%);
         }
     to {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
@@ -235,7 +234,7 @@ body.dark-mode {
     align-items: center;
 }
 
-.image-section img {
+.image-section img, .image-section video {
     width: 100%;
     height: auto;
     border-radius: 20px;
@@ -373,7 +372,7 @@ body.dark-mode {
     color: #4D00FF;
     font-style: bold;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
     text-decoration: none;
 }
 
@@ -497,6 +496,70 @@ body.dark-mode {
     color: #F3EEFF; /* Change color on hover */
   }
   
+  
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 5vw;
+}
+
+.contact-container a{
+    font-size: 11vw;
+    color: #524D5C;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    font-weight: bold;
+    line-height: 9vw;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .contact-container a{
+    color: #F3EEFF;
+}
+
+.contact-container a:hover{
+    color: #FFC800;
+}
+
+.dark-mode .contact-container a:hover{
+    color: #123CE7;
+}
+
+/* Style for span within a tags */
+.contact-container span {
+    color: #4D00FF;
+    display: inline-block; /* Required for rotation */
+    transition: transform 0.15s ease; /* Smooth rotation animation */
+}
+
+.dark-mode .contact-container span {
+    color: #FFC800;
+}
+
+/* Rotate span on hover of the parent a tag */
+.contact-container a:hover span {
+    transform: rotate(180deg);
+}
+
+.contact-container span{
+    color:#4D00FF;
+}
+
+.link-one{
+    transform: translateX(-15vw);
+}
+
+.link-two{
+    transform: translateX(2.8vw);
+}
+
+.link-three{
+    transform: translateX(9.5vw);
+}
+
 
 /*MEDIA QUERIES*/
 

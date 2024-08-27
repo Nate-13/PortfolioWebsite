@@ -47,15 +47,17 @@ body.dark-mode {
     display: flex;
     flex-direction: row;
     padding-bottom: 1vw;
-    animation: load-in 2s ease forwards;
+    animation: load-in 1s ease forwards;
 }
 
 @keyframes load-in {
     0% {
         opacity: 10%;
+        scale: 0.95;
     }
     100% {
         opacity: 100%;
+        scale: 1;
     }
 }
 

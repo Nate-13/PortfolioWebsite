@@ -238,11 +238,13 @@ body.dark-mode {
     width: 100%;
     height: auto;
     border-radius: 20px;
-    transition: ease 0.6s;
+    transition: ease 0.4s;
+    object-fit: cover;
+    aspect-ratio: 16/9;
 }
 
 .image-section img:hover, .image-section video:hover {
-    transform: scale(0.99);
+    border-radius: 40px;
 }
 
 video::-webkit-media-controls-start-playback-button {

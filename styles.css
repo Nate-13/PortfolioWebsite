@@ -47,6 +47,16 @@ body.dark-mode {
     display: flex;
     flex-direction: row;
     padding-bottom: 1vw;
+    animation: load-in 2s ease forwards;
+}
+
+@keyframes load-in {
+    0% {
+        opacity: 10%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
 
 
@@ -211,6 +221,10 @@ body.dark-mode {
     animation-range: entry 0% cover 40%;
 }
 
+#projects a {
+    text-decoration: none;
+}
+
 @keyframes container-slide {
     from {
         transform: translateX(5%);
@@ -334,6 +348,8 @@ video::-webkit-media-controls-start-playback-button {
     right: 1.3vw;
     font-weight: bold;
     z-index: 5;
+    animation: load-in 1s ease-in-out forwards;
+
 }
 
 .menu-item {
@@ -621,6 +637,7 @@ video::-webkit-media-controls-start-playback-button {
 @media (max-width: 1250px) {
     html {
         font-size: 10px;
+        overflow: hidden;
     }
 
     #menu {
@@ -795,9 +812,13 @@ video::-webkit-media-controls-start-playback-button {
     }
 
     .resume{
-        padding: 0px, 7.5%;
-        font-size: 2.5rem;
-        height: 5rem;
+        padding: 0px, 5%;
+        font-size: 2rem;
+        height: 4rem;
         border-radius: 2.5rem;
+    }
+
+    .footer h2, .footer a{
+        font-size: 0.5rem;
     }
 }

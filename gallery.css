@@ -1,0 +1,320 @@
+body{
+    --bg-color: #F3EEFF;
+    --text-color: #000000;
+    background-color: var(--bg-color);
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+html{
+    font-size: 16px;
+    width: 100%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#header{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#header .header-container{
+    width: 100%;
+    padding-left: 5%;
+    height: auto;
+    padding-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header h1 {
+    color: var(--text-color);
+    font-size: 20.5vw;
+    font-weight: 200;
+    font-variation-settings: 'wght' 600;
+    margin: 0;
+    line-height: 0.9;
+    align-self: start;
+    transition: all ease 1s;
+    animation: load 2s ease-in-out forwards;
+}
+
+@keyframes load{
+    0%{
+        font-variation-settings: 'wght' 500;
+        color: #00000000;
+    }
+    75%{
+        color: #000000;
+    }
+    100%{
+        font-variation-settings: 'wght' 200;
+        color: #000000;
+    }
+}
+
+
+#header p {
+    font-size: 2rem;
+    font-weight: 200;
+    width: 60%;
+    margin: 0;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#header .arrow{
+    padding-top: 3vw;
+    font-size: 5rem;
+    animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+#works{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+
+#works img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.wall{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F3EEFF60;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 5%;
+}
+.frame-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F3EEFF60;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 5%;
+    margin: 15% 15% 0 15%;
+}
+
+.label {
+    width: 60%;
+    align-self: end;
+    margin-top: 2%;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 2rem 4rem 2rem 2rem;
+    line-height: 1;
+    margin-bottom: 10%;
+}
+
+.small{
+    width: 45%;
+    margin-right: 15%;
+    margin-bottom: 0;
+}
+
+.label h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.label span{
+    font-weight: 200;
+}
+
+.label h2{
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 0;
+    margin-top: 1%;
+}
+
+.label p{
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #00000050;
+    width: 100%;
+}
+
+.label h2 .material-symbols-outlined{
+    font-weight: 300;
+    color: #00000075;
+    font-size: smaller;
+}
+
+.exit {
+    position: static;
+    bottom: 50px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: black;
+    transition: all 0.4s ease;
+    font-weight: 200;
+    z-index: 100;
+    transform: translateY(10px);
+    margin: 0% 5% 5% 2%;
+}
+
+.exit a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease;
+}
+
+.exit:hover, .exit a:hover{
+    font-weight: 400;
+}
+
+.exit span{
+    animation: pointer 4s infinite;
+}
+
+@keyframes pointer {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+}
+
+#footer {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: var(--bg-color);
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 3px solid var(--text-color);
+  }
+  
+  #footer h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: normal;
+  }
+  
+  #footer div {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  #footer a {
+    text-decoration: none;
+    font-size: 1.5rem; 
+    color: var(--text-color); 
+    transition: color 0.2s ease;
+  }
+  
+  #footer a:hover {
+    color: #00000075;
+  }
+  
+
+/* Media Querys */
+
+@media (max-width: 1000px) {
+    html{
+        font-size: 12px;
+    }
+
+    #header p {
+        width: 80%;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    #header span {
+        margin-top: 2rem;
+        font-size: 3rem;
+    }
+
+    .wall{
+        width: 90%;
+    }
+
+    .small{
+        width: 80%;
+        align-self: end;
+        margin-top: 2%;
+        background-color: var(--bg-color);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        padding: 2rem 4rem 2rem 2rem;
+        line-height: 1;
+        padding: 1rem 2rem 1rem 1rem;
+        margin-bottom: 20%;
+        margin-right: 0;
+    }
+
+    .frame-small{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #F3EEFF60;
+        transition: all 0.5s ease;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        padding: 5%;
+        margin: 0;
+    }
+
+    .label {
+        width: 80%;
+        padding: 1rem 2rem 1rem 1rem;
+        margin-bottom: 20%;
+    }
+
+    #footer h2{
+        font-size: 1.1rem;
+    }
+
+    #footer a{
+        font-size: 1.1rem;
+    }
+}

@@ -73,7 +73,7 @@ body.dark-mode {
     vertical-align: middle;
     margin: 0;
     font-size: 2.75vw;
-    letter-spacing: 0.3vw;
+    letter-spacing: 0.8vw;
     color: #524D5C;
     z-index: 3;
     transition: color 0.5s ease;

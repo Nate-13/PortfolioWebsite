@@ -193,7 +193,7 @@ html{
     cursor: pointer;
     color: black;
     transition: all 0.4s ease;
-    font-weight: 200;
+    font-weight: 300;
     z-index: 100;
     transform: translateY(10px);
     margin: 0% 5% 5% 2%;
@@ -206,7 +206,7 @@ html{
 }
 
 .exit:hover, .exit a:hover{
-    font-weight: 400;
+    font-weight: 450;
 }
 
 .exit span{
@@ -215,10 +215,10 @@ html{
 
 @keyframes pointer {
     0%, 100% {
-        transform: translateX(0);
+        transform: translateX(5);
     }
     50% {
-        transform: translateX(-10px);
+        transform: translateX(15px);
     }
 }
 

@@ -317,6 +317,7 @@ video::-webkit-media-controls-start-playback-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 
 #btn-dark-mode:hover {

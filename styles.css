@@ -7,14 +7,12 @@ body {
     scroll-behavior: smooth;
 }
 
-
-
 html {
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
     font-size: 16px;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: 'Arimo', sans-serif;
 }
 
 body.dark-mode {
@@ -291,7 +289,7 @@ video::-webkit-media-controls-start-playback-button {
 
 .project-description {
     color: #524D5C;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin: 1rem 0; 
     width: 50%;
     padding: 0, 1rem;
@@ -403,6 +401,7 @@ video::-webkit-media-controls-start-playback-button {
 
 .text-box{
     width: 85%;
+    padding-bottom: 3%;
 }
 
 
@@ -458,6 +457,7 @@ video::-webkit-media-controls-start-playback-button {
     background-color: #4D00FF;
     width: 100%;
     box-sizing: border-box;
+    z-index: 5;
   }
   
   #footer h2 {
@@ -640,7 +640,7 @@ video::-webkit-media-controls-start-playback-button {
 @media (max-width: 1250px) {
     html {
         font-size: 10px;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     #menu {
@@ -712,7 +712,7 @@ video::-webkit-media-controls-start-playback-button {
     }
 
     .section-title{
-        padding-left: 1.5vw;
+        padding-left: 5vw;
     }
 
     #about{
@@ -734,6 +734,7 @@ video::-webkit-media-controls-start-playback-button {
 
     .project-description {
         width: 100%;
+    
     }
 
     .explore-button {

@@ -1,0 +1,140 @@
+html{
+    font-family: 'Arimo', sans-serif;
+    background-color: #F3EEFF;
+    font-size: 16px;
+}
+
+#header{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 5%;
+    height: auto;
+    animation: load 2s;
+}
+
+@keyframes load{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.title{
+    font-size: 15vw;
+    font-style: bold;
+    color: #4D00FF;
+    margin: 0;
+    transform: translateX(-0.8vw);
+}
+
+.subtitle{
+    font-size: 3rem;
+    color: #524D5C;
+    margin: 0;
+    width: 75%;
+    margin-bottom: 3rem;
+}
+
+#header h2{
+    font-size: 2rem;
+    color: #4D00FF;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+#header span{
+    font-size: 2rem;
+    color: #524D5C;
+    font-weight: normal;
+    margin: 0;
+}
+
+#header h3{
+    font-size: 1.5rem;
+    color: #524D5C;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.img-container img, .img-container video{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+}
+
+.section{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.section h2{
+    font-size: 4rem;
+    color: #4D00FF;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    font-size: 1.75rem;
+    color: #524D5C;
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 75%;
+}
+
+.spacer{
+    margin-top: 5rem;
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 10px;
+        overflow-x: hidden;
+    }
+
+    #header{
+        padding: 2%;
+    }
+    #header .subtitle{
+        font-size: 2.3rem;
+        width: 100%;
+    }
+
+    .title{
+        transform: translateX(-0.8vw);
+    }
+
+    .content{
+        padding: 2%;
+    }
+
+    .section p{
+        width: 100%;
+    }
+    
+
+}

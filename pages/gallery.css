@@ -67,6 +67,14 @@ html{
     }
 }
 
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 #header p {
     font-size: 2rem;
@@ -76,12 +84,14 @@ html{
     color: var(--text-color);
     text-align: center;
     margin-top: 4rem;
+    animation: fade 1s ease;
 }
 
 #header .arrow{
     padding-top: 3vw;
     font-size: 5rem;
     animation: bounce 4s infinite;
+    animation: fade 1s ease;
 }
 
 @keyframes bounce {
@@ -125,6 +135,7 @@ html{
     transition: all 0.5s ease;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     padding: 5%;
+    animation: fade 1s ease;
 }
 .frame-small {
     display: flex;
@@ -136,6 +147,7 @@ html{
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     padding: 5%;
     margin: 15% 15% 0 15%;
+    animation: fade 1s ease;
 }
 
 .label {
@@ -147,6 +159,7 @@ html{
     padding: 2rem 4rem 2rem 2rem;
     line-height: 1;
     margin-bottom: 10%;
+    animation: fade 1s ease;
 }
 
 .small{

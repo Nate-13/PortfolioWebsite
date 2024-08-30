@@ -5,6 +5,7 @@ body {
     width: 100%;
     max-width: 100%;
     scroll-behavior: smooth;
+    position: relative
 }
 
 html {
@@ -40,7 +41,6 @@ body.dark-mode {
 
 #header {
     height: auto;
-    padding-left: 5vw;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -62,6 +62,7 @@ body.dark-mode {
 
 .name-box{
     padding-top: 4vw;
+    margin-left: 5vw;
     display: flex;
     justify-content: start;
     flex-direction: column;;
@@ -641,6 +642,13 @@ video::-webkit-media-controls-start-playback-button {
     html {
         font-size: 10px;
         overflow-x: hidden;
+        width: 100%;
+    }
+
+    body{
+        overflow-x: hidden;
+        width: 100%;
+        position: relative
     }
 
     #menu {
@@ -707,8 +715,11 @@ video::-webkit-media-controls-start-playback-button {
     
 
     #header {
-        padding-left: 1.5vw;
         padding-bottom: 30vw;
+    }
+
+    .name-box{
+        margin-left: 1.5vw;
     }
 
     .section-title{

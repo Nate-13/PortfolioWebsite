@@ -91,7 +91,6 @@ html{
     padding-top: 3vw;
     font-size: 5rem;
     animation: bounce 4s infinite;
-    animation: fade 1s ease;
 }
 
 @keyframes bounce {

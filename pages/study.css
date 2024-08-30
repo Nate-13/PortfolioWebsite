@@ -31,6 +31,7 @@ html{
     color: #4D00FF;
     margin: 0;
     transform: translateX(-0.8vw);
+    line-height: 1;
 }
 
 .subtitle{
@@ -97,6 +98,22 @@ html{
     align-items: center;
     margin: 0;
     width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #524D5C40;
+    border-radius: 20px;
+    animation: loading 2s infinite;
+}
+
+@keyframes loading{
+    0%{
+        background-color: #524D5C40;
+    }
+    50%{
+        background-color: #524D5C80;
+    }
+    100%{
+        background-color: #524D5C40;
+    }
 }
 
 .img-container img, .img-container video{

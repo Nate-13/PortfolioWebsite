@@ -115,9 +115,21 @@ html{
 #works img{
     width: 100%;
     height: auto;
+    background-color: #524D5C30;
+    animation: loading 2s infinite;
 }
 
-
+@keyframes loading{
+    0%{
+        background-color: #524D5C20;
+    }
+    50%{
+        background-color: #524D5C80;
+    }
+    100%{
+        background-color: #524D5C20;
+    }
+}
 
 .wall{
     width: 45%;

@@ -99,27 +99,26 @@ html{
     margin: 0;
     width: 100%;
     aspect-ratio: 16/9;
-    background-color: #524D5C40;
-    border-radius: 20px;
-    animation: loading 2s infinite;
-}
-
-@keyframes loading{
-    0%{
-        background-color: #524D5C40;
-    }
-    50%{
-        background-color: #524D5C80;
-    }
-    100%{
-        background-color: #524D5C40;
-    }
 }
 
 .img-container img, .img-container video{
     width: 100%;
     aspect-ratio: 16/9;
     border-radius: 20px;
+    background-color: #524D5C30;
+    animation: loading 2s infinite;
+}
+
+@keyframes loading{
+    0%{
+        background-color: #524D5C20;
+    }
+    50%{
+        background-color: #524D5C80;
+    }
+    100%{
+        background-color: #524D5C20;
+    }
 }
 
 .section{
@@ -143,6 +142,12 @@ html{
     margin: 0;
     margin-bottom: 1rem;
     width: 75%;
+}
+
+.section p span {
+    color: #17004b;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .spacer{

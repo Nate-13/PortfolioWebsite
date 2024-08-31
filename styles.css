@@ -256,6 +256,20 @@ body.dark-mode {
     transition: ease 0.4s;
     object-fit: cover;
     aspect-ratio: 16/9;
+    background-color: #524D5C30;
+    animation: loading 2s infinite;
+}
+
+@keyframes loading{
+    0%{
+        background-color: #524D5C20;
+    }
+    50%{
+        background-color: #524D5C80;
+    }
+    100%{
+        background-color: #524D5C20;
+    }
 }
 
 .image-section img:hover, .image-section video:hover {
@@ -648,7 +662,8 @@ video::-webkit-media-controls-start-playback-button {
     body{
         overflow-x: hidden;
         width: 100%;
-        position: relative
+        position: relative;
+        margin: 0;
     }
 
     #menu {
@@ -736,7 +751,18 @@ video::-webkit-media-controls-start-playback-button {
     }
 
     .container {
-        margin: 0 5vw 12vw 5vw;
+        margin: 0 3vw 10vw 3vw;
+        border-radius: 1.25rem;
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .container img, .container video {
+        border-radius: 10px;
+    }
+
+    .text-box{
+        width: 90%;
     }
 
     #about .container{
@@ -833,7 +859,11 @@ video::-webkit-media-controls-start-playback-button {
         border-radius: 2.5rem;
     }
 
-    .footer h2, .footer a{
-        font-size: 0.5rem;
+    #footer {
+        padding: 0.75rem 0.75rem;
+    }
+
+    #footer h2, #footer a{
+        font-size: 1.25rem;
     }
 }

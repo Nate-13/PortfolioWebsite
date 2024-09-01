@@ -142,19 +142,94 @@ html{
     margin: 0;
     margin-bottom: 1rem;
     width: 75%;
+    line-height: 1.2;
 }
 
 .section p span {
     color: #17004b;
     font-style: italic;
     font-weight: 600;
+    background-color: #4D00FF20;
 }
 
 .spacer{
     margin-top: 5rem;
 }
 
-@media (max-width: 1000px) {
+#footer {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 3px solid #4D00FF;
+  }
+  
+  #footer h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #4D00FF;
+    font-weight: normal;
+  }
+  
+  #footer div {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  #footer a {
+    text-decoration: none;
+    font-size: 1.5rem; 
+    color: #4D00FF; 
+    transition: color 0.2s ease;
+  }
+  
+  #footer a:hover {
+    color: #00000075;
+  }
+
+
+  .exit {
+    position: static;
+    bottom: 50px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #4D00FF;
+    transition: all 0.4s ease;
+    font-weight: 300;
+    z-index: 100;
+    transform: translateY(10px);
+    margin: 0% 5% 5% 2%;
+}
+
+.exit a{
+    text-decoration: none;
+    color: #4D00FF;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+
+.exit span{
+    animation: pointer 2s infinite;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.exit:hover, .exit a:hover{
+    letter-spacing: 0.4rem;
+}
+
+@keyframes pointer {
+    0%, 100% {
+        transform: translateX(5);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+}
+
+@media (max-width: 800px) {
     html {
         font-size: 10px;
         overflow-x: hidden;
@@ -180,5 +255,17 @@ html{
         width: 100%;
     }
     
+    #footer{
+        padding: 0.5rem 1rem;
+        border-top: 1px solid #4D00FF;
+    }
+
+    #footer h2{
+        font-size: 1.5rem;
+    }
+
+    #footer a{
+        font-size: 1.5rem;
+    }
 
 }

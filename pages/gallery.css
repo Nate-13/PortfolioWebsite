@@ -189,6 +189,10 @@ html{
     font-weight: 200;
 }
 
+.label a{
+    color: #00000075;
+}
+
 .label h2{
     font-size: 1.3rem;
     font-weight: 300;

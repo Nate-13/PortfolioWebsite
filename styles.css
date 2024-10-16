@@ -72,7 +72,7 @@ body.dark-mode {
     vertical-align: middle;
     margin: 0;
     font-size: 2.75vw;
-    letter-spacing: 0.8vw;
+    letter-spacing: 0.25vw;
     color: #524D5C;
     z-index: 3;
     transition: color 0.5s ease;
@@ -214,7 +214,7 @@ body.dark-mode {
     margin: 0 13.5vw 12vw 5vw;
     background-color: #F3EEFF60;
     padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     border-radius: 2rem;
     -webkit-backdrop-filter: blur(5vw);
     backdrop-filter: blur(8px);
@@ -277,7 +277,7 @@ body.dark-mode {
 }
 
 .image-section img:hover, .image-section video:hover {
-    border-radius: 40px;
+    border-radius: 3rem;
 }
 
 video::-webkit-media-controls-start-playback-button {
@@ -785,8 +785,8 @@ video::-webkit-media-controls-start-playback-button {
     .container {
         margin: 0 3vw 10vw 3vw;
         border-radius: 1.25rem;
-        padding-top: 1rem;
-        padding-bottom: 0rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .container img, .container video {
@@ -812,7 +812,7 @@ video::-webkit-media-controls-start-playback-button {
 
     .dev-text {
         font-size: 4.65vw;
-        letter-spacing: 0.5vw;
+        letter-spacing: 0.25vw;
     }
 
     .mobile-menu {

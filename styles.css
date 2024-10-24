@@ -211,10 +211,9 @@ body.dark-mode {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0 13.5vw 12vw 5vw;
+    margin: 0 13.5vw 1.5vw 5vw;
     background-color: #F3EEFF60;
     padding-top: 2rem;
-    padding-bottom: 2rem;
     border-radius: 2rem;
     -webkit-backdrop-filter: blur(5vw);
     backdrop-filter: blur(8px);
@@ -308,14 +307,27 @@ video::-webkit-media-controls-start-playback-button {
 
 .project-description {
     color: #524D5C;
-    font-size: 1.75rem;
+    font-size: 1.2rem;
     margin: 1rem 0; 
-    width: 50%;
     padding: 0, 1rem;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    font-weight: normal;
+    font-style: italic;
+    align-self: start;
+}
+
+.project-description span{
+    color:#4D00FF;
+    font-weight: bold;
 }
 
 .dark-mode .project-description {
     color: #F3EEFF;
+}
+
+.dark-mode .project-description span{
+    color:#FFC800;
 }
 
 #btn-dark-mode {
@@ -802,8 +814,9 @@ video::-webkit-media-controls-start-playback-button {
     }
 
     .project-description {
-        width: 100%;
-    
+
+        
+
     }
 
     .explore-button {

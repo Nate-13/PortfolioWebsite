@@ -14,6 +14,30 @@ html{
     height: auto;
 }
 
+.alert {
+    padding: 20px;
+    background-color: rgb(255, 208, 0);
+    color: black;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-style: bold;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
 @keyframes load{
     0%{
         opacity: 0;

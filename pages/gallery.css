@@ -148,6 +148,7 @@ html{
     padding: 5%;
     animation: fade 1s ease;
 }
+
 .frame-small {
     display: flex;
     flex-direction: column;

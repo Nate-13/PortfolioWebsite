@@ -363,5 +363,14 @@ a{
         font-size: 1.5rem;
     }
 
+    .app-btn{
+        padding: 20px;
+
+    }
+    .huemuse-btn{
+        width: 35rem;
+        height: 75px;
+        font-size: 1.75rem;
+    }
 
 }

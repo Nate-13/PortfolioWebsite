@@ -276,7 +276,7 @@ body.dark-mode {
 }
 
 .image-section img:hover, .image-section video:hover {
-    border-radius: 3rem;
+    scale: 1.007;
 }
 
 video::-webkit-media-controls-start-playback-button {

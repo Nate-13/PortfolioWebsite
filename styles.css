@@ -809,7 +809,7 @@ video::-webkit-media-controls-start-playback-button {
         margin: 0 3vw 10vw 3vw;
         border-radius: 1.25rem;
         padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 0;
     }
 
     .container img, .container video {

@@ -2,35 +2,30 @@ const move = document.getElementById("sun");
 const header = document.getElementById("header");
 const projects = document.getElementById("projects");
 
+// Store the last known cursor position
+let lastCursorX = 0;
+let lastCursorY = 0;
+
 // Sun Cursor Control
 
 function isMobile() {
     return window.innerWidth <= 1000;
 }
 
-document.body.onpointermove = event => {
-
-    if (isMobile()) return;
-
-    const { clientX, clientY } = event;
-    const scrollX = window.pageXOffset;
-    const scrollY = window.pageYOffset;
-
-    // Get header dimensions and position
+// Function to update circle position
+function updateCirclePosition(x, y) {
     const headerRect = header.getBoundingClientRect();
 
     // Check if the cursor is within the header
     if (
-        clientY >= headerRect.top &&
-        clientY <= headerRect.bottom &&
-        clientX >= headerRect.left &&
-        clientX <= headerRect.right
+        y >= headerRect.top &&
+        y <= headerRect.bottom &&
+        x >= headerRect.left &&
+        x <= headerRect.right
     ) {
-        move.classList.remove("projects-mode"); // Remove projects mode class
-
-        // Adjust for scroll position
-        const oppositeX = window.innerWidth - clientX - move.offsetWidth / 2 + scrollX;
-        const oppositeY = window.innerHeight - clientY - move.offsetHeight / 2 + scrollY;
+        move.classList.remove("projects-mode");
+        const oppositeX = window.innerWidth - x - move.offsetWidth / 2 + window.pageXOffset;
+        const oppositeY = window.innerHeight - y - move.offsetHeight / 2 + window.pageYOffset;
 
         move.animate({
             left: `${oppositeX}px`,
@@ -39,23 +34,34 @@ document.body.onpointermove = event => {
             height: "35vw",
             filter: "blur(5vw)"
         }, {duration: 1000, fill: "forwards"});
-    }
-    else{
-        move.classList.add("projects-mode"); // Apply projects mode class
-
-        // Adjust for scroll position
-        const offsetX = clientX - move.offsetWidth / 2 + scrollX;
-        const offsetY = clientY - move.offsetHeight / 2 + scrollY;
+    } else {
+        move.classList.add("projects-mode");
+        const pageX = x + window.pageXOffset;
+        const pageY = y + window.pageYOffset;
 
         move.animate({
-            left: `${offsetX}px`, // Center the element on the cursor
-            top: `${offsetY}px`,  // Center the element on the cursor
-            width: "30px", // Shrink to 20x20px
-            height: "30px", // Shrink to 20x20px
-            filter: "blur(0px)" // Remove blur
-        }, {duration: 1000, fill: "forwards"});
+            left: `${pageX - move.offsetWidth / 2}px`,
+            top: `${pageY - move.offsetHeight / 2}px`,
+            width: "30px",
+            height: "30px",
+            filter: "blur(0px)"
+        }, {duration: 750, fill: "forwards"});
     }
-   
+}
+
+// Update position on pointer move
+document.body.onpointermove = event => {
+    if (isMobile()) return;
+    
+    lastCursorX = event.clientX;
+    lastCursorY = event.clientY;
+    updateCirclePosition(lastCursorX, lastCursorY);
+};
+
+// Update position on scroll
+window.onscroll = () => {
+    if (isMobile()) return;
+    updateCirclePosition(lastCursorX, lastCursorY);
 };
 
 const darkMode = document.getElementById("btn-dark-mode");

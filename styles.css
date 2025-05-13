@@ -923,4 +923,259 @@ video::-webkit-media-controls-start-playback-button {
     #footer h2, #footer a{
         font-size: 1.25rem;
     }
+
+    #additional-projects {
+        padding: 0 5vw;
+        margin-bottom: 2vw;
+    }
+
+    .additional-project {
+        padding: 1.5rem 2rem;
+        margin: 0 2vw 1rem 2vw;
+    }
+
+    .project-header {
+        min-width: 220px;
+        margin-right: 2rem;
+    }
+
+    .project-icon {
+        font-size: 2.75rem;
+    }
+
+    .project-header h3 {
+        font-size: 1.75rem;
+    }
+
+    .project-content {
+        gap: 2rem;
+    }
+
+    .project-content p {
+        font-size: 1.25rem;
+    }
+
+    .tag-box span {
+        font-size: 1rem;
+        padding: 0.25rem 1rem;
+    }
+
+    .section-title.additional {
+        font-size: 3.5vw;
+        padding-left: 3vw;
+        margin-bottom: 2vw;
+    }
+
+    .github-link {
+        padding: 0.75rem;
+    }
+
+    .github-link .material-symbols-outlined {
+        font-size: 2rem;
+    }
+}
+
+/* Additional Projects Section */
+#additional-projects {
+    width: 81%;
+    padding: 0 5vw;
+    margin-bottom: 3vw;
+}
+
+.additional-project {
+    display: flex;
+    align-items: center;
+    background-color: #F3EEFF60;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 50px;
+    -webkit-backdrop-filter: blur(5vw);
+    backdrop-filter: blur(8px);
+    border: 1px solid #F3EEFF75;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    animation: container-slide linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+    margin-right: 2rem;
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    color: #4D00FF;
+    margin-right: 1rem;
+}
+
+.project-header h3 {
+    color: #4D00FF;
+    font-size: 1.75rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.project-content p {
+    color: #524D5C;
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.tag-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.tag-box span {
+    font-size: 0.9rem;
+    color: #524D5C;
+    border: 2px solid #524D5C50;
+    padding: 0.25rem 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+.github-link {
+    color: #4D00FF;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    align-self: center;
+}
+
+.dark-mode .additional-project {
+    background-color: #1E064060;
+    border: 1px solid #1E064075;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .project-icon,
+.dark-mode .project-header h3,
+.dark-mode .github-link {
+    color: #FFC800;
+}
+
+.dark-mode .project-content p {
+    color: #F3EEFF;
+}
+
+.dark-mode .tag-box span {
+    color: #F3EEFF;
+    border-color: #F3EEFF50;
+}
+
+.section-title.additional {
+    font-size: 4vw;
+    margin-bottom: 2vw;
+    font-weight: 600;
+}
+
+.section-title.additional::before {
+    display: none;
+}
+
+/* Tablet Styles */
+@media (max-width: 1250px) {
+    .additional-project {
+        padding: 1.5rem 2rem;
+        margin: 0 2vw 1rem 2vw;
+    }
+
+    .project-header {
+        min-width: 220px;
+        margin-right: 2rem;
+    }
+
+    .project-icon {
+        font-size: 2.75rem;
+    }
+
+    .project-header h3 {
+        font-size: 1.75rem;
+    }
+
+    .project-content {
+        gap: 2rem;
+    }
+
+    .project-content p {
+        font-size: 1.25rem;
+    }
+
+    .tag-box span {
+        font-size: 1rem;
+        padding: 0.25rem 1rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 800px) {
+    .additional-project {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25rem 1.5rem;
+        gap: 1rem;
+        margin: 0 1vw 1rem 1vw;
+        border-radius: 20px;
+        width: 90%;
+    }
+
+    .project-header {
+        min-width: auto;
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+        width: 100%;
+    }
+
+    .project-icon {
+        font-size: 2.25rem;
+    }
+
+    .project-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .project-content p {
+        font-size: 1.1rem;
+        width: 100%;
+        line-height: 1.4;
+    }
+
+    .tag-box {
+        display: none;
+    }
+
+    .github-link {
+        margin: 0.75rem 0 0 0;
+        align-self: flex-start;
+    }
+
+    .github-link .material-symbols-outlined {
+        font-size: 2rem;
+    }
 }

@@ -925,13 +925,15 @@ video::-webkit-media-controls-start-playback-button {
     }
 
     #additional-projects {
-        padding: 0 5vw;
-        margin-bottom: 2vw;
+        width: 94%;
+        padding: 0;
+        margin: 0 3vw 2vw 3vw;
     }
 
     .additional-project {
         padding: 1.5rem 2rem;
-        margin: 0 2vw 1rem 2vw;
+        margin: 0 0 1rem 0;
+        border-radius: 100px;
     }
 
     .project-header {
@@ -949,15 +951,17 @@ video::-webkit-media-controls-start-playback-button {
 
     .project-content {
         gap: 2rem;
+        flex: 1;
+        min-width: 0;
     }
 
     .project-content p {
         font-size: 1.25rem;
+        min-width: 300px;
     }
 
-    .tag-box span {
-        font-size: 1rem;
-        padding: 0.25rem 1rem;
+    .tag-box {
+        display: none;
     }
 
     .section-title.additional {
@@ -988,7 +992,7 @@ video::-webkit-media-controls-start-playback-button {
     background-color: #F3EEFF60;
     padding: 1.5rem 2rem;
     margin-bottom: 1rem;
-    border-radius: 50px;
+    border-radius: 100px;
     -webkit-backdrop-filter: blur(5vw);
     backdrop-filter: blur(8px);
     border: 1px solid #F3EEFF75;
@@ -1054,11 +1058,32 @@ video::-webkit-media-controls-start-playback-button {
 .github-link {
     color: #4D00FF;
     text-decoration: none;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
     transition: all 0.3s ease;
     margin-left: 1rem;
     align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.github-link:hover {
+    background-color: #4D00FF20;
+    transform: scale(1.1);
+}
+
+.dark-mode .github-link {
+    color: #FFC800;
+}
+
+.dark-mode .github-link:hover {
+    background-color: #FFC80020;
+}
+
+.github-link .material-symbols-outlined {
+    font-size: 2rem;
 }
 
 .dark-mode .additional-project {
@@ -1094,9 +1119,18 @@ video::-webkit-media-controls-start-playback-button {
 
 /* Tablet Styles */
 @media (max-width: 1250px) {
+    
+    #additional-projects {
+        width: 94%;
+        margin-bottom: 3vw;
+        padding: 0;
+    }
+
     .additional-project {
         padding: 1.5rem 2rem;
-        margin: 0 2vw 1rem 2vw;
+        margin: 0 0 1rem 0;
+        border-radius: 100px;
+
     }
 
     .project-header {
@@ -1114,15 +1148,17 @@ video::-webkit-media-controls-start-playback-button {
 
     .project-content {
         gap: 2rem;
+        flex: 1;
+        min-width: 0;
     }
 
     .project-content p {
         font-size: 1.25rem;
+        min-width: 300px;
     }
 
-    .tag-box span {
-        font-size: 1rem;
-        padding: 0.25rem 1rem;
+    .tag-box {
+        display: none;
     }
 }
 
@@ -1164,15 +1200,25 @@ video::-webkit-media-controls-start-playback-button {
         font-size: 1.1rem;
         width: 100%;
         line-height: 1.4;
+        min-width: 0;
     }
 
     .tag-box {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .tag-box span {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.75rem;
     }
 
     .github-link {
         margin: 0.75rem 0 0 0;
         align-self: flex-start;
+        padding: 0.5rem;
     }
 
     .github-link .material-symbols-outlined {

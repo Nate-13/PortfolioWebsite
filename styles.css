@@ -1,11 +1,47 @@
+:root {
+    --color-bg-light: #F3EEFF;
+    --color-bg-dark: #1E0640;
+    --color-sun: #FFC800;
+    --color-sun-dark: #123CE7;
+    --color-sun-gradient-bottom: #FC6D00;
+    --color-primary: #4D00FF;
+    --color-primary-dark: #FFC228;
+    --color-secondary: #524D5C;
+    --color-secondary-light: #F3EEFF;
+    --color-accent: #FFC800;
+    --color-accent-dark: #123CE7;
+    --color-border-light: #F3EEFF75;
+    --color-border-dark: #1E064075;
+    --color-shadow-light: rgba(0, 0, 0, 0.1);
+    --color-shadow-dark: rgba(255, 255, 255, 0.1);
+    --font-main: 'Arimo', sans-serif;
+    --font-alt: 'Montserrat', sans-serif;
+    --transition-main: 0.5s ease;
+    --transition-fast: 0.2s ease;
+    --header-padding-bottom: 1vw;
+    --section-title-size: 15vw;
+    --project-title-size: 2.5rem;
+    --project-desc-size: 1.2rem;
+    --menu-item-size: 1.75vw;
+    --btn-dark-size: 3.8rem;
+    --btn-dark-radius: 0.7rem;
+    --sun-size: 35vw;
+    --sun-blur: 5vw;
+    --container-radius: 2rem;
+    --container-bg-light: #F3EEFF60;
+    --container-bg-dark: #1E064060;
+    --container-border-light: #F3EEFF75;
+    --container-border-dark: #1E064075;
+}
+
 body {
-    font-family: "Arimo", sans-serif;
-    background-color: #F3EEFF;
-    transition: background-color 0.5s ease;
+    font-family: var(--font-main);
+    background-color: var(--color-bg-light);
+    transition: background-color var(--transition-main);
     width: 100%;
     max-width: 100%;
     scroll-behavior: smooth;
-    position: relative
+    position: relative;
 }
 
 html {
@@ -13,11 +49,11 @@ html {
     max-width: 100%;
     overflow-x: hidden;
     font-size: 16px;
-    font-family: 'Arimo', sans-serif;
+    font-family: var(--font-main);
 }
 
 body.dark-mode {
-    background-color: #1E0640;
+    background-color: var(--color-bg-dark);
 }
 
 
@@ -44,7 +80,7 @@ body.dark-mode {
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding-bottom: 1vw;
+    padding-bottom: var(--header-padding-bottom);
     animation: load-in 1s ease forwards;
 }
 
@@ -73,13 +109,13 @@ body.dark-mode {
     margin: 0;
     font-size: 2.75vw;
     letter-spacing: 0.25vw;
-    color: #524D5C;
+    color: var(--color-secondary);
     z-index: 3;
-    transition: color 0.5s ease;
+    transition: color var(--transition-main);
 }
 
 .dark-mode .dev-text {
-    color: #F3EEFF;
+    color: var(--color-secondary-light);
 }
 
 .name {
@@ -88,30 +124,30 @@ body.dark-mode {
     padding: 0; 
     font-size: 12vw;
     line-height: 1;
-    color: #4D00FF;
+    color: var(--color-primary);
     translate: -0.82vw;
     line-height: 0.8;
     z-index: 3;
-    transition: color 0.5s ease;
+    transition: color var(--transition-main);
 }
 
 .dark-mode .name {
-    color: #FFC228;
+    color: var(--color-primary-dark);
 }
 
 .name-gradient {
-    background: linear-gradient(180deg, #4D00FF, rgba(0,0,0,0));
+    background: linear-gradient(180deg, var(--color-primary), rgba(0,0,0,0));
     width: 57.5vw;
     height: 28vw;
     position: relative;
     bottom: 0.682vw;
     /*animation: gradient-sweep 2s 1;*/
     z-index: 4;
-    transition: color 0.5s ease;
+    transition: color var(--transition-main);
 }
 
 .dark-mode .name-gradient {
-    background: linear-gradient(180deg, #FFC228, rgba(0,0,0,0));
+    background: linear-gradient(180deg, var(--color-primary-dark), rgba(0,0,0,0));
 }
 
 @keyframes gradient-sweep {
@@ -126,17 +162,17 @@ body.dark-mode {
 
 .sun{
     position: absolute;
-    width: 35vw;
-    height: 35vw;
-    background-color: #FFC800;
+    width: var(--sun-size);
+    height: var(--sun-size);
+    background-color: var(--color-sun);
     border-radius: 100%;
     top: 10vw;
     right: 13vw;
-    -webkit-backdrop-filter: blur(5vw);
+    -webkit-backdrop-filter: blur(var(--sun-blur));
     backdrop-filter: blur(5px);
-    filter: blur(5vw);
+    filter: blur(var(--sun-blur));
     z-index: -1;
-    transition: color 0.5s ease;
+    transition: color var(--transition-main), background-color var(--transition-main);
     animation: grow 2s;
 }
 
@@ -152,7 +188,7 @@ body.dark-mode {
 }
 
 .dark-mode .sun {
-    background-color: #123CE7;
+    background-color: var(--color-sun-dark);
 }
 
 
@@ -168,9 +204,9 @@ body.dark-mode {
 }
 
 .section-title {
-    font-size: 15vw;
+    font-size: var(--section-title-size);
     font-weight: bold;
-    color: #4D00FF;
+    color: var(--color-primary);
     margin-bottom: 5vw;
     width: 100%;
     position: relative;
@@ -185,7 +221,7 @@ body.dark-mode {
     position: absolute;
     width: 15vw;
     height: 10vw;
-    background: #FFC228;
+    background: var(--color-primary-dark);
     bottom: 1.5vw;
     left: 10vw;
     z-index: -1;
@@ -214,7 +250,7 @@ body.dark-mode {
 
 
 .dark-mode .section-title {
-    color: #FFC800;
+    color: var(--color-accent);
 }
 
 .container {
@@ -223,13 +259,13 @@ body.dark-mode {
     align-items: center;
     justify-content: space-between;
     margin: 0 13.5vw 1.5vw 5vw;
-    background-color: #F3EEFF60;
+    background-color: var(--container-bg-light);
     padding-top: 2rem;
-    border-radius: 2rem;
+    border-radius: var(--container-radius);
     -webkit-backdrop-filter: blur(5vw);
     backdrop-filter: blur(8px);
-    border: 1px solid #F3EEFF75;
-    transition: all 0.5s ease;
+    border: 1px solid var(--color-border-light);
+    transition: all var(--transition-main);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     animation: container-slide linear forwards;
     animation-timeline: view();
@@ -251,8 +287,8 @@ body.dark-mode {
 
 
 .dark-mode .container {
-    background-color: #1E064060;
-    border: 1px solid #1E064075;
+    background-color: var(--container-bg-dark);
+    border: 1px solid var(--color-border-dark);
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1);
 }
 
@@ -300,14 +336,14 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .project-title {
-    color: #4D00FF;
-    font-size: 2.5rem;
+    color: var(--color-primary);
+    font-size: var(--project-title-size);
     font-weight: bold;
     margin: 0;
 }
 
 .dark-mode .project-title {
-    color: #FFC800;
+    color: var(--color-accent);
 }
 
 .text-section {
@@ -317,8 +353,8 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .project-description {
-    color: #524D5C;
-    font-size: 1.2rem;
+    color: var(--color-secondary);
+    font-size: var(--project-desc-size);
     margin: 1rem 0; 
     padding: 0, 1rem;
     margin-left: 6vw;
@@ -329,29 +365,29 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .project-description span{
-    color:#4D00FF;
+    color:var(--color-primary);
     font-weight: bold;
 }
 
 .dark-mode .project-description {
-    color: #F3EEFF;
+    color: var(--color-secondary-light);
 }
 
 .dark-mode .project-description span{
-    color:#FFC800;
+    color:var(--color-accent);
 }
 
 #btn-dark-mode {
     position: fixed;
     bottom: 1.3rem;
     right: 1.3rem;
-    width: 3.8rem;
-    height: 3.8rem;
+    width: var(--btn-dark-size);
+    height: var(--btn-dark-size);
     padding: 0;
-    background-color: #524D5C;
-    color: #F3EEFF;
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-light);
     border: none;
-    border-radius: 0.7rem;
+    border-radius: var(--btn-dark-radius);
     cursor: pointer;
     transition: ease 0.3s;
     display: flex;
@@ -396,25 +432,25 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .menu-item {
-    font-size: 1.75vw;
-    color: #4D00FF;
+    font-size: var(--menu-item-size);
+    color: var(--color-primary);
     font-style: bold;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     text-decoration: none;
 }
 
 .menu-item:hover {
-    color: #FFC800;
+    color: var(--color-accent);
     letter-spacing: 0.25vw;
 }
 
 .dark-mode .menu-item {
-    color: #FFC800;
+    color: var(--color-accent);
 }
 
 .dark-mode .menu-item:hover {
-    color: #123CE7;
+    color: var(--color-sun-dark);
 }
 
 
@@ -449,7 +485,7 @@ video::-webkit-media-controls-start-playback-button {
 
 .text-box h1{
     font-size: 5rem;
-    color: #4D00FF;
+    color: var(--color-primary);
     margin-bottom: 2rem;
     margin-top: 0;
     width: 85%;
@@ -457,7 +493,7 @@ video::-webkit-media-controls-start-playback-button {
 
 .text-box p{
     font-size: 1.5rem;
-    color: #524D5C;
+    color: var(--color-secondary);
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -469,7 +505,7 @@ video::-webkit-media-controls-start-playback-button {
 
 .text-box h3{
     font-size: 2.5rem;
-    color: #4D00FF;
+    color: var(--color-primary);
     margin-bottom: 0.25rem;
     margin-top: 2rem;
 }
@@ -484,11 +520,11 @@ video::-webkit-media-controls-start-playback-button {
 
 
 .dark-mode p {
-    color: #F3EEFF;
+    color: var(--color-secondary-light);
 }
 
 .dark-mode h1, .dark-mode h3 {
-    color: #FFC800;
+    color: var(--color-accent);
 }
 
 #footer {
@@ -496,7 +532,7 @@ video::-webkit-media-controls-start-playback-button {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #4D00FF;
+    background-color: var(--color-primary);
     width: 100%;
     box-sizing: border-box;
     z-index: 5;
@@ -505,7 +541,7 @@ video::-webkit-media-controls-start-playback-button {
   #footer h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: #F3EEFF;
+    color: var(--color-secondary-light);
     font-weight: normal;
   }
   
@@ -518,27 +554,27 @@ video::-webkit-media-controls-start-playback-button {
   #footer a {
     text-decoration: none; /* Remove underline from links */
     font-size: 1.5rem; /* Adjust font size of the links */
-    color: #F3EEFF; /* Text color of links */
+    color: var(--color-secondary-light); /* Text color of links */
     transition: color 0.2s ease; /* Smooth transition for hover effect */
   }
   
   #footer a:hover {
-    color: #FFC800;
+    color: var(--color-accent);
   }
   
   .dark-mode #footer {
-    background-color: #FFC800;
+    background-color: var(--color-accent);
   }
   .dark-mode #footer h2 {
-    color: #524D5C;
+    color: var(--color-secondary);
   }
 
   .dark-mode #footer a {
-    color: #524D5C;
+    color: var(--color-secondary);
   }
 
   .dark-mode #footer a:hover {
-    color: #123CE7;
+    color: var(--color-sun-dark);
   }
   
 .contact-container{
@@ -552,36 +588,36 @@ video::-webkit-media-controls-start-playback-button {
 
 .contact-container a{
     font-size: 11vw;
-    color: #524D5C;
+    color: var(--color-secondary);
     margin-bottom: 2rem;
     margin-top: 0;
     font-weight: bold;
     line-height: 9vw;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     text-decoration: none;
 }
 
 .dark-mode .contact-container a{
-    color: #F3EEFF;
+    color: var(--color-secondary-light);
 }
 
 .contact-container a:hover{
-    color: #FFC800;
+    color: var(--color-accent);
 }
 
 .dark-mode .contact-container a:hover{
-    color: #123CE7;
+    color: var(--color-sun-dark);
 }
 
 /* Style for span within a tags */
 .contact-container span {
-    color: #4D00FF;
+    color: var(--color-primary);
     display: inline-block; /* Required for rotation */
     transition: transform 0.15s ease; /* Smooth rotation animation */
 }
 
 .dark-mode .contact-container span {
-    color: #FFC800;
+    color: var(--color-accent);
 }
 
 /* Rotate span on hover of the parent a tag */
@@ -590,7 +626,7 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .contact-container span{
-    color:#4D00FF;
+    color:var(--color-primary);
 }
 
 .link-one{
@@ -620,22 +656,22 @@ video::-webkit-media-controls-start-playback-button {
     width: auto;
     padding: 0px 5%;
     height: 3rem;
-    background-color: #4D00FF;
-    color: #F3EEFF;
+    background-color: var(--color-primary);
+    color: var(--color-secondary-light);
     font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
     border-radius: 3vw;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     margin-right: 1vw;
     border: none;
-    box-shadow: 0 0 0 #4D00FF;
+    box-shadow: 0 0 0 var(--color-primary);
     animation: pulse 2s infinite;
 }
 
 .resume:hover{
-    background-color: #FFC800;
-    color: #524D5C;
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
     animation: paused;
     scale: 1.03;
 }
@@ -653,14 +689,14 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .dark-mode .resume{
-    background-color: #FFC800;
-    color: #1E0640;
-    box-shadow: 0 0 0 #FFC800;
+    background-color: var(--color-accent);
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 0 var(--color-accent);
     animation: pulsedark 2s infinite;
 }
 
 .dark-mode .resume:hover{
-    background-color: #123CE7;
+    background-color: var(--color-sun-dark);
     animation: paused;
 }
 
@@ -678,7 +714,7 @@ video::-webkit-media-controls-start-playback-button {
 
 .alert {
     padding: 20px;
-    background-color: #FFC800;
+    background-color: var(--color-accent);
     color: black;
     margin-right: 18%;
     font-size: 2rem;
@@ -698,7 +734,7 @@ video::-webkit-media-controls-start-playback-button {
   }
   
   .closebtn:hover {
-    color: #4D00FF;
+    color: var(--color-primary);
   }
 
 /*MEDIA QUERIES*/
@@ -824,12 +860,6 @@ video::-webkit-media-controls-start-playback-button {
         margin: 0 5vw 6vw 1vw;
     }
 
-    .project-description {
-
-        
-
-    }
-
     .explore-button {
         width: 100%;
     }
@@ -886,14 +916,14 @@ video::-webkit-media-controls-start-playback-button {
     .mobile-menu a .material-symbols-outlined,
     .mobile-menu button .material-symbols-outlined {
         font-size: 36px;
-        color: #4D00FF;
+        color: var(--color-primary);
         box-sizing: border-box;
         transition: all 0.5s ease;
     }
 
     .dark-mode .mobile-menu a .material-symbols-outlined,
     .dark-mode .mobile-menu button .material-symbols-outlined {
-        color: #FFC800;
+        color: var(--color-accent);
     }
 
     .mobile-menu button .material-symbols-outlined.secondary {
@@ -901,7 +931,7 @@ video::-webkit-media-controls-start-playback-button {
     }
 
     .dark-mode .mobile-menu button .material-symbols-outlined.secondary {
-        color: #F3EEFF;
+        color: var(--color-secondary-light);
     }
 
     .mobile-menu a.hidden,
@@ -989,13 +1019,13 @@ video::-webkit-media-controls-start-playback-button {
 .additional-project {
     display: flex;
     align-items: center;
-    background-color: #F3EEFF60;
+    background-color: var(--container-bg-light);
     padding: 1.5rem 2rem;
     margin-bottom: 1rem;
     border-radius: 100px;
     -webkit-backdrop-filter: blur(5vw);
     backdrop-filter: blur(8px);
-    border: 1px solid #F3EEFF75;
+    border: 1px solid var(--color-border-light);
     transition: all 0.3s ease;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     animation: container-slide linear forwards;
@@ -1012,12 +1042,12 @@ video::-webkit-media-controls-start-playback-button {
 
 .project-icon {
     font-size: 2.5rem;
-    color: #4D00FF;
+    color: var(--color-primary);
     margin-right: 1rem;
 }
 
 .project-header h3 {
-    color: #4D00FF;
+    color: var(--color-primary);
     font-size: 1.75rem;
     margin: 0;
     font-weight: bold;
@@ -1032,7 +1062,7 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .project-content p {
-    color: #524D5C;
+    color: var(--color-secondary);
     font-size: 1.1rem;
     margin: 0;
     line-height: 1.4;
@@ -1048,15 +1078,15 @@ video::-webkit-media-controls-start-playback-button {
 
 .tag-box span {
     font-size: 0.9rem;
-    color: #524D5C;
-    border: 2px solid #524D5C50;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary-light);
     padding: 0.25rem 1rem;
     border-radius: 2rem;
     font-weight: bold;
 }
 
 .github-link {
-    color: #4D00FF;
+    color: var(--color-primary);
     text-decoration: none;
     padding: 0.75rem;
     border-radius: 0.75rem;
@@ -1070,16 +1100,16 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .github-link:hover {
-    background-color: #4D00FF20;
+    background-color: var(--color-primary);
     transform: scale(1.1);
 }
 
 .dark-mode .github-link {
-    color: #FFC800;
+    color: var(--color-accent);
 }
 
 .dark-mode .github-link:hover {
-    background-color: #FFC80020;
+    background-color: var(--color-accent);
 }
 
 .github-link .material-symbols-outlined {
@@ -1087,24 +1117,24 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .dark-mode .additional-project {
-    background-color: #1E064060;
-    border: 1px solid #1E064075;
+    background-color: var(--container-bg-dark);
+    border: 1px solid var(--color-border-dark);
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1);
 }
 
 .dark-mode .project-icon,
 .dark-mode .project-header h3,
 .dark-mode .github-link {
-    color: #FFC800;
+    color: var(--color-accent);
 }
 
 .dark-mode .project-content p {
-    color: #F3EEFF;
+    color: var(--color-secondary-light);
 }
 
 .dark-mode .tag-box span {
-    color: #F3EEFF;
-    border-color: #F3EEFF50;
+    color: var(--color-secondary-light);
+    border-color: var(--color-secondary-light);
 }
 
 .section-title.additional {

@@ -8,15 +8,23 @@ let lastCursorY = 0;
 
 // Sun Cursor Control
 
+const COLOR_SUN_LIGHT = '#FFC800';
+const COLOR_SUN_DARK = '#123CE7';
+const SUN_SIZE = '35vw';
+const SUN_BLUR = '5vw';
+
 function isMobile() {
     return window.innerWidth <= 1000;
 }
 
-// Function to update circle position
+function getCurrentSunColor() {
+    return document.body.classList.contains('dark-mode') ? COLOR_SUN_DARK : COLOR_SUN_LIGHT;
+}
+
+// Function to update circle position and color
 function updateCirclePosition(x, y) {
     const headerRect = header.getBoundingClientRect();
-
-    // Check if the cursor is within the header
+    // Only animate position, size, and blur. Color is set instantly elsewhere.
     if (
         y >= headerRect.top &&
         y <= headerRect.bottom &&
@@ -26,19 +34,17 @@ function updateCirclePosition(x, y) {
         move.classList.remove("projects-mode");
         const oppositeX = window.innerWidth - x - move.offsetWidth / 2 + window.pageXOffset;
         const oppositeY = window.innerHeight - y - move.offsetHeight / 2 + window.pageYOffset;
-
         move.animate({
             left: `${oppositeX}px`,
             top: `${oppositeY}px`,
-            width: "35vw", 
-            height: "35vw",
-            filter: "blur(5vw)"
+            width: SUN_SIZE, 
+            height: SUN_SIZE,
+            filter: `blur(${SUN_BLUR})`
         }, {duration: 1000, fill: "forwards"});
     } else {
         move.classList.add("projects-mode");
         const pageX = x + window.pageXOffset;
         const pageY = y + window.pageYOffset;
-
         move.animate({
             left: `${pageX - move.offsetWidth / 2}px`,
             top: `${pageY - move.offsetHeight / 2}px`,
@@ -47,6 +53,11 @@ function updateCirclePosition(x, y) {
             filter: "blur(0px)"
         }, {duration: 750, fill: "forwards"});
     }
+}
+
+// Update sun color on dark mode toggle
+function updateSunColor() {
+    move.style.backgroundColor = getCurrentSunColor();
 }
 
 // Update position on pointer move
@@ -89,7 +100,7 @@ function toggleDarkMode() {
     else {
         mobileIcon.textContent = "dark_mode";
     }
-
+    updateSunColor();
 }
 const mobileMenu = document.getElementById("btn-mobile-menu");
 const hiddenElements = document.querySelectorAll(".mobile-menu a.hidden, .mobile-menu button.hidden");
@@ -114,5 +125,7 @@ function toggleMobileMenu() {
         mobileMenu.querySelector("span.main").textContent = "menu";
     }
 }
+
+document.addEventListener('DOMContentLoaded', updateSunColor);
 
 

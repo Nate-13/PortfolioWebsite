@@ -60,6 +60,16 @@ function updateSunColor() {
     move.style.backgroundColor = getCurrentSunColor();
 }
 
+function setGradientImageForMode() {
+    const gradient = document.getElementById('gradient-img');
+    if (!gradient) return;
+    if (document.body.classList.contains('dark-mode')) {
+        gradient.src = './media/transition-blur-dark.png';
+    } else {
+        gradient.src = './media/transition-blur.png';
+    }
+}
+
 // Update position on pointer move
 document.body.onpointermove = event => {
     if (isMobile()) return;
@@ -101,6 +111,7 @@ function toggleDarkMode() {
         mobileIcon.textContent = "dark_mode";
     }
     updateSunColor();
+    setGradientImageForMode(); // Update gradient image on mode switch
 }
 const mobileMenu = document.getElementById("btn-mobile-menu");
 const hiddenElements = document.querySelectorAll(".mobile-menu a.hidden, .mobile-menu button.hidden");
@@ -126,6 +137,65 @@ function toggleMobileMenu() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', updateSunColor);
+// Gradient scroll transition effect - smooth scaling approach
+(function() {
+  const gradient = document.getElementById('gradient-img');
+  const transitionContainer = document.getElementById('gradient-transition');
+  if (!gradient || !transitionContainer) return;
+  
+  function handleScroll() {
+    const rect = transitionContainer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const transitionStart = rect.top - windowHeight;
+    const transitionEnd = rect.bottom - windowHeight;
+    
+    // Calculate progress - only start when we're actually in the transition area
+    let progress = 0;
+    if (transitionEnd < 0) {
+      progress = 1;
+    } else if (transitionStart < 0) {
+      progress = Math.min(1, Math.max(0, 1 - transitionEnd / rect.height));
+    }
+    
+    // Only show gradient when progress > 0.1 (about 10% into transition)
+    const visibilityThreshold = 0.1;
+    if (progress < visibilityThreshold) {
+      gradient.style.opacity = '0';
+      gradient.style.transform = 'scaleY(0)';
+    } else {
+      gradient.style.opacity = '1';
+      // Adjust progress to start from 0 after the threshold
+      const adjustedProgress = (progress - visibilityThreshold) / (1 - visibilityThreshold);
+      
+      const minScale = 0.01; // Start very small instead of 8px
+      const maxScale = 1.5;
+      const scaleY = minScale + (maxScale - minScale) * adjustedProgress;
+      
+      gradient.style.transform = `scaleY(${scaleY})`;
+    }
+    
+    gradient.style.transformOrigin = 'bottom';
+    
+    // Handle positioning based on progress
+    if (progress >= 1) {
+      gradient.style.position = 'absolute';
+      gradient.style.bottom = '0';
+      gradient.classList.add('stretched');
+    } else {
+      gradient.style.position = 'fixed';
+      gradient.style.bottom = '0';
+      gradient.classList.remove('stretched');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleScroll);
+  document.addEventListener('DOMContentLoaded', handleScroll);
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+    setGradientImageForMode(); // Set correct gradient on load
+    updateSunColor();
+});
 
 

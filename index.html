@@ -51,57 +51,40 @@
                 <h1 class="name">BORWICK</h1>
                 <div class="name-gradient"></div>
             </div>    
-        </div>
+            </div>
         
+        <!-- Gradient transition effect between header and projects -->
+        <div id="gradient-transition">
+          <img
+            id="gradient-img"
+            src="./media/transition-blur.png"
+            alt="Gradient Transition"
+            draggable="false"
+          />
+        </div>
+
         <h1 class="section-title one" id="projects-title">PROJECTS</h1>
         <div id="projects">
-
-             <!-- NOTHING -->
-             <a href="/nothing/">
-
-                <div class="container">
-                <div class="image-section">
-                    <img src="/nothing/media/nothing_title.png" alt="Nothing Community Edition Project 2025">    
-                </div>
-                <h2 class="project-description"><span>NOTHING: </span>My submissions for the Nothing Community Edition Project 2025.</h2>
-            </div>
-            </a>
-            
             <!-- Hue Muse -->
             <a href="/hue-muse/">
-
                 <div class="container">
                 <div class="image-section">
                     <img src="/hue-muse/media/Hue-Muse-Cover.png" alt="Hue Muse">
-                    <!-- <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="myVideo">
-                        <source src="./media/huemuse-video.mp4" type="video/mp4">
-                    </video> -->
-                
                 </div>
                 <h2 class="project-description"><span>HUE MUSE: </span>An interactive color inspiration tool using React, JavaScript, HTML, and CSS.</h2>
             </div>
             </a>
-            
             <!-- MBTA App Concept -->
             <a href="/mbta/">
-
                 <div class="container">
                 <div class="image-section">
-                    <!-- <img src="mbtapixel.png" alt="MBTA App Concept"> -->
                     <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="myVideo">
                         <source src="/mbta/media/mbta-video.mp4" type="video/mp4">
                     </video>
-                
                 </div>
-                <!-- <div class="text-section">
-                    <h1 class="project-title">MBTA APP CONCEPT</h1>
-                    <p class="project-description">Bringing accessibility and simplicity to Boston's underground transit system.</p>
-                </div> -->
                 <h2 class="project-description"><span>MBTA APP CONCEPT:</span> Bringing accessibility and simplicity to Boston's underground transit system.</h2>
             </div>
             </a>
-
-
             <!-- Seam Carving -->
             <a href="/seam-carving/">
                 <div class="container">
@@ -109,54 +92,26 @@
                     <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="myVideo">
                         <source src="/seam-carving/media/png-compression.mp4" type="video/mp4">
                     </video>
-                
                 </div>
-                <!-- <div class="text-section">
-                    <h1 class="project-title">SEAM CARVING PNG COMPRESSION</h1>
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor aliqua. Ut enim consequat.</p>
-                </div> -->
                 <h2 class="project-description"><span>SEAM CARVING:</span> Exploring a seam-carving algorithm to intelligently compress images while preserving subjects.</h2>
-
             </div>
-
             </a>
-
-            
             <a href="/portfolio/">
                 <div class="container">
                     <div class="image-section">
                         <img src="./media/website-mockup.png" alt="NATEBORWICK.COM">
-                        <!-- <video width="100%" height="100%" autoplay loop muted>
-                            <source src="portfoliovideo.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video> -->
                     </div>
-                    <!-- <div class="text-section">
-                        <h1 class="project-title">NATEBORWICK.COM</h1>
-                        <p class="project-description">My portfolio website, coded and designed from scratch.</p>
-
-                    </div> -->
                     <h2 class="project-description"><span>PORTFOLIO WEBSITE:</span> Making this website from scratch with HTML, CSS, and Javascript!</h2>
                 </div>
             </a>
-
             <a href="/gallery/">
                 <div class="container" id="gallery">
                 <div class="image-section">
                     <img src="./media/gallery-thumbnail.png" alt="The Gallery">
                 </div>
-                <!-- <div class="text-section">
-                    <h1 class="project-title">THE GALLERY</h1>
-                    <p class="project-description">A collection of my art and design works, created with various mediums, and inspired by a range of experiences.</p>
-
-                </div> -->
                 <p class="project-description"><span>THE GALLERY:</span> A collection of my design and art works, created with various mediums, and inspired by a range of experiences.</p>
-
             </div>
             </a>
-            
-        
-
         </div> 
 
         <h1 class="section-title additional" id="additional-projects-title">ADDITIONAL PROJECTS</h1>
@@ -179,7 +134,25 @@
                     <span class="material-symbols-outlined">code</span>
                 </a>
             </div>
-
+            <!-- Nothing Community Project (moved here, second position) -->
+            <div class="additional-project">
+                <div class="project-header">
+                    <span class="material-symbols-outlined project-icon">smartphone</span>
+                    <h3>Nothing CE 2025</h3>
+                </div>
+                <div class="project-content">
+                    <p>My submissions for the Nothing Community Edition Project 2025.</p>
+                    <div class="tag-box">
+                        <span>Product Design</span>
+                        <span>UX Design</span>
+                        <span>Figma</span>
+                        <span>Illustrator</span>
+                    </div>
+                </div>
+                <a href="/nothing/" class="github-link">
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </div>
             <div class="additional-project">
                 <div class="project-header">
                     <span class="material-symbols-outlined project-icon">genetics</span>
@@ -196,7 +169,6 @@
                     <span class="material-symbols-outlined">code</span>
                 </a>
             </div>
-
             <div class="additional-project">
                 <div class="project-header">
                     <span class="material-symbols-outlined project-icon">chess_pawn</span>
@@ -214,8 +186,6 @@
                     <span class="material-symbols-outlined">code</span>
                 </a>
             </div>
-
-        
         </div>
 
         <h1 class="section-title two" id="about-title">ABOUT</h1>

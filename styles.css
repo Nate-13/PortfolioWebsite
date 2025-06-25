@@ -966,6 +966,10 @@ video::-webkit-media-controls-start-playback-button {
         padding: 0 3vw 2vw 3vw;
     }
 
+    .additional {
+
+    }
+
     .additional-project {
         padding: 1.5rem 2rem;
         margin: 0 0 1rem 0;
@@ -1000,23 +1004,40 @@ video::-webkit-media-controls-start-playback-button {
         display: none;
     }
 
-    .section-title.additional {
-        font-size: 3.5vw;
-        padding-left: 3vw;
+    #additional-projects-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--color-primary);
+        padding-left: 1.5rem;
     }
 
-    .github-link {
-        padding: 0.75rem;
+    .section-title.additional::before {
+        display: none;
     }
 
-    .github-link .material-symbols-outlined {
-        font-size: 2rem;
+    /* Tablet Styles */
+    @media (max-width: 1250px) {
+        .section-title.additional {
+            font-size: 2rem;
+        }
+    }
+
+    /* Tag box for additional projects: lightgrey outline */
+    #additional-projects .tag-box span {
+        border: 2px solid #e0e0e0 !important;
+        color: var(--color-secondary);
+        background: transparent;
+    }
+
+    .dark-mode #additional-projects .tag-box span {
+        border: 2px solid #e0e0e0 !important;
+        color: var(--color-secondary-light);
     }
 }
 
 /* Additional Projects Section */
 #additional-projects {
-    width: 81%;
+    width: 81.5%;
     padding: 0 5vw;
     padding-right: 19%;
     background-color: var(--color-primary);
@@ -1096,13 +1117,14 @@ video::-webkit-media-controls-start-playback-button {
     font-weight: bold;
 }
 
+.github-link, .case-study-link {
 .github-link,
 .additional-project .github-link {
     color: var(--color-primary);
     text-decoration: none;
     padding: 0.75rem;
     border-radius: 0.75rem;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s;
     margin-left: 1rem;
     align-self: center;
     display: flex;
@@ -1110,21 +1132,43 @@ video::-webkit-media-controls-start-playback-button {
     justify-content: center;
     background-color: transparent;
     border: none;
+    border: none;
     font: inherit;
     cursor: pointer;
 }
 
+.github-link span.material-symbols-outlined, .case-study-link span.material-symbols-outlined {
+    font-size: 2rem;
+    transition: color 0.3s;
+    color: var(--color-primary);
+}
+
+.github-link:hover, .case-study-link:hover {
+    background-color: rgba(77, 0, 255, 0.15); /* var(--color-primary) with alpha */
 .github-link:hover,
 .additional-project .github-link:hover {
     background-color: rgba(77, 0, 255, 0.12); /* semi-transparent primary color */
     transform: scale(1.1);
+    color: var(--color-primary);
 }
 
+.github-link:hover span.material-symbols-outlined, .case-study-link:hover span.material-symbols-outlined {
+    color: var(--color-primary);
 .dark-mode .github-link,
 .dark-mode .additional-project .github-link {
     color: var(--color-accent);
 }
 
+.dark-mode .github-link, .dark-mode .case-study-link {
+    color: var(--color-accent);
+}
+
+.dark-mode .github-link span.material-symbols-outlined, .dark-mode .case-study-link span.material-symbols-outlined {
+    color: var(--color-accent);
+}
+
+.dark-mode .github-link:hover, .dark-mode .case-study_link:hover {
+    background-color: rgba(255, 200, 0, 0.15); /* var(--color-accent) with alpha */
 .dark-mode .github-link:hover,
 .dark-mode .additional-project .github-link:hover {
     background-color: rgba(255, 200, 0, 0.18); /* semi-transparent accent color */
@@ -1142,6 +1186,8 @@ video::-webkit-media-controls-start-playback-button {
     color: var(--color-accent);
 }
 
+.dark-mode .github-link:hover span.material-symbols-outlined, .dark-mode .case-study-link:hover span.material-symbols-outlined {
+    color: var(--color-accent);
 .dark-mode .project-content p {
     color: var(--color-secondary-light);
 }
@@ -1160,151 +1206,12 @@ video::-webkit-media-controls-start-playback-button {
     display: none;
 }
 
-/* Tablet Styles */
-@media (max-width: 1250px) {
-    
-    #additional-projects {
-        width: 94%;
-        padding: 10px;
-        padding-right: 6%;
-    }
-
-    .additional-project {
-        padding: 1.5rem 2rem;
-        margin: 0 0 1rem 0;
-        border-radius: 100px;
-
-    }
-
-    .project-header {
-        min-width: 220px;
-        margin-right: 2rem;
-    }
-
-    .project-icon {
-        font-size: 2.75rem;
-    }
-
-    .project-header h3 {
-        font-size: 1.75rem;
-    }
-
-    .project-content {
-        gap: 2rem;
-        flex: 1;
-        min-width: 0;
-    }
-
-    .project-content p {
-        font-size: 1.25rem;
-        min-width: 300px;
-    }
-
-    .tag-box {
-        display: none;
-    }
+/* Fix disappearing icon/text on hover by removing opacity from the whole button, only apply to background */
+.github-link:hover, .case-study-link:hover {
+    box-shadow: 0 0 0 1000px var(--color-primary)1A inset;
+    opacity: 1;
 }
-
-/* Mobile Styles */
-@media (max-width: 800px) {
-    .additional-project {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25rem 1.5rem;
-        gap: 1rem;
-        margin: 0 1vw 1rem 1vw;
-        border-radius: 20px;
-        width: 90%;
-    }
-
-    .project-header {
-        min-width: auto;
-        margin-right: 0;
-        margin-bottom: 0.75rem;
-        width: 100%;
-    }
-
-    .project-icon {
-        font-size: 2.25rem;
-    }
-
-    .project-header h3 {
-        font-size: 1.5rem;
-    }
-
-    .project-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-        width: 100%;
-    }
-
-    .project-content p {
-        font-size: 1.1rem;
-        width: 100%;
-        line-height: 1.4;
-        min-width: 0;
-    }
-
-    .tag-box {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        width: 100%;
-    }
-
-    .tag-box span {
-        font-size: 0.9rem;
-        padding: 0.25rem 0.75rem;
-    }
-
-    .github-link {
-        margin: 0.75rem 0 0 0;
-        align-self: flex-start;
-        padding: 0.5rem;
-    }
-
-    .github-link .material-symbols-outlined {
-        font-size: 2rem;
-    }
-}
-
-#gradient-transition {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background: transparent;
-  overflow: visible;
-  z-index: 0;
-}
-
-#gradient-img {
-  position: fixed;
-  left: -10vw;
-  bottom: 0;
-  width: 120vw;
-  height: auto;
-  min-height: 8px;
-  max-height: none;
-  object-fit: fill;
-  z-index: 0;
-  pointer-events: none;
-  transition: transform 0.1s ease-out, opacity 0.2s ease;
-  transform-origin: bottom;
-  will-change: transform, opacity;
-  display: block;
-  opacity: 0;
-}
-#gradient-img.stretched {
-  position: absolute !important;
-  left: -10vw;
-  width: 120vw;
-  bottom: 0;
-  top: auto;
-  z-index: 0;
-}
-@media (max-width: 800px) {
-  #gradient-img, #gradient-transition {
-    display: none !important;
-  }
+.dark-mode .github-link:hover, .dark-mode .case-study-link:hover {
+    box-shadow: 0 0 0 1000px var(--color-accent)1A inset;
+    opacity: 1;
 }

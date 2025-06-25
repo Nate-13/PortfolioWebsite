@@ -961,7 +961,6 @@ video::-webkit-media-controls-start-playback-button {
     }
 
     .additional {
-
     }
 
     .additional-project {
@@ -1018,6 +1017,91 @@ video::-webkit-media-controls-start-playback-button {
 
 }
 
+@media (max-width: 1250px) {
+    #additional-projects {
+        width: 94%;
+        padding: 0;
+        margin: 0 3vw 2vw 3vw;
+    }
+    .additional-project {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 1.2rem;
+        border-radius: 2rem;
+    }
+    .project-header {
+        min-width: 0;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        flex-direction: row;
+        align-items: center;
+    }
+    .project-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    .project-content p {
+        min-width: 0;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .tag-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .github-link, .case-study-link {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 700px) {
+    .additional-project {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.2rem 0.5rem;
+        border-radius: 1.2rem;
+    }
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+    }
+    .project-header h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+    }
+    .project-icon {
+        font-size: 2rem;
+        margin-right: 0;
+        margin-bottom: 0.2rem;
+    }
+    .project-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        width: 100%;
+    }
+    .project-content p {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        width: 100%;
+    }
+    .tag-box {
+        margin-bottom: 0.3rem;
+    }
+    .github-link, .case-study-link {
+        margin-left: 0;
+        margin-top: 0.3rem;
+        align-self: flex-start;
+    }
+}
+
 /* Additional Projects Section */
 #additional-projects {
     width: 81.5%;
@@ -1031,7 +1115,7 @@ video::-webkit-media-controls-start-playback-button {
     background-color: var(--container-bg-light);
     padding: 1.5rem 2rem;
     margin-bottom: 1rem;
-    border-radius: 100px;
+    border-radius: var(--container-radius);
     -webkit-backdrop-filter: blur(5vw);
     backdrop-filter: blur(8px);
     border: 1px solid var(--color-border-light);
@@ -1050,7 +1134,7 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .project-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--color-primary);
     margin-right: 1rem;
 }
@@ -1065,17 +1149,22 @@ video::-webkit-media-controls-start-playback-button {
 .project-content {
     flex: 1;
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 2rem;
 }
 
-.project-content p {
+.project-desc {
     color: var(--color-secondary);
     font-size: 1.1rem;
     margin: 0;
     line-height: 1.4;
     flex: 1;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .tag-box {
@@ -1088,12 +1177,12 @@ video::-webkit-media-controls-start-playback-button {
 .tag-box span {
     font-size: 0.9rem;
     color: var(--color-secondary);
-    border: 2px solid var(--color-secondary-light);
+    border: 2px solid #e0e0e0;
+    background: transparent;
     padding: 0.25rem 1rem;
     border-radius: 2rem;
     font-weight: bold;
 }
-
 
 .github-link, .case-study-link {
     color: var(--color-primary);
@@ -1101,13 +1190,14 @@ video::-webkit-media-controls-start-playback-button {
     padding: 0.75rem;
     border-radius: 0.75rem;
     transition: background-color 0.3s, transform 0.3s;
-    margin-left: 1rem;
-    align-self: center;
+    align-self: flex-end;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
     border: none;
+    font: inherit;
+    cursor: pointer;
 }
 
 .github-link span.material-symbols-outlined, .case-study-link span.material-symbols-outlined {
@@ -1116,42 +1206,18 @@ video::-webkit-media-controls-start-playback-button {
     color: var(--color-primary);
 }
 
+.dark-mode .github-link span.material-symbols-outlined, .dark-mode .case-study-link span.material-symbols-outlined {
+    color: var(--color-primary-dark);
+}
+
 .github-link:hover, .case-study-link:hover {
-    background-color: rgba(77, 0, 255, 0.15); /* var(--color-primary) with alpha */
+    background-color: rgba(77, 0, 255, 0.15);
     transform: scale(1.1);
     color: var(--color-primary);
 }
 
 .github-link:hover span.material-symbols-outlined, .case-study-link:hover span.material-symbols-outlined {
     color: var(--color-primary);
-}
-
-.dark-mode .github-link, .dark-mode .case-study-link {
-    color: var(--color-accent);
-}
-
-.dark-mode .github-link span.material-symbols-outlined, .dark-mode .case-study-link span.material-symbols-outlined {
-    color: var(--color-accent);
-}
-
-.dark-mode .github-link:hover {
-    background-color: rgba(255, 200, 0, 0.15); /* var(--color-accent) with alpha */
-    color: var(--color-accent);
-}
-
-.dark-mode .case-study-link:hover {
-    background-color: rgba(255, 200, 0, 0.15); /* var(--color-accent) with alpha */
-    color: var(--color-accent);
-}
-
-.dark-mode .github-link:hover span.material-symbols-outlined, .dark-mode .case-study-link:hover span.material-symbols-outlined {
-    color: var(--color-accent);
-}
-
-/* Fix disappearing icon/text on hover by removing opacity from the whole button, only apply to background */
-.github-link:hover, .case-study-link:hover {
-    box-shadow: 0 0 0 1000px var(--color-primary)1A inset;
-    opacity: 1;
 }
 
 .dark-mode #additional-projects {
@@ -1169,19 +1235,87 @@ video::-webkit-media-controls-start-playback-button {
     color: var(--color-accent);
 }
 
-.dark-mode .project-content p {
+.dark-mode .project-desc {
     color: var(--color-secondary-light);
 }
 
 .dark-mode .tag-box span {
-    color: var(--color-secondary-light);
-    border-color: var(--color-secondary);
+    color: #d1d1d1;
+    border-color: #d1d1d1;
 }
 
-.dark-mode .github-link {
+.dark-mode .github-link, .dark-mode .case-study-link {
     color: var(--color-accent);
 }
 
-.dark-mode .github-link:hover span.material-symbols-outlined {
-    color: var(--color-primary-dark);
+.dark-mode .github-link:hover, .dark-mode .case-study-link:hover {
+    background-color: rgba(255, 200, 0, 0.15);
+    color: var(--color-accent);
+}
+
+.dark-mode .github-link:hover span.material-symbols-outlined, .dark-mode .case-study-link:hover span.material-symbols-outlined {
+    color: var(--color-accent);
+}
+
+@media (max-width: 1000px) {
+    #additional-projects {
+        width: 90%;
+        padding: 0 3vw;
+    }
+    .additional-project {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    .project-header {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    .project-header h3 {
+        font-size: 1.5rem;
+    }
+    .project-icon {
+        font-size: 2.5rem;
+    }
+    .project-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+    }
+    .project-desc {
+        font-size: 1rem;
+    }
+    .project-actions {
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+    }
+    .tag-box {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    #additional-projects {
+        padding: 0 1vw;
+    }
+    .additional-project {
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .project-header h3 {
+        font-size: 1.2rem;
+    }
+    .project-icon {
+        font-size: 2rem;
+    }
+    .project-desc {
+        font-size: 0.95rem;
+    }
+    .tag-box span {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.8rem;
+    }
 }

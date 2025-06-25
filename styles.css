@@ -1016,17 +1016,6 @@ video::-webkit-media-controls-start-playback-button {
         }
     }
 
-    /* Tag box for additional projects: lightgrey outline */
-    #additional-projects .tag-box span {
-        border: 2px solid #e0e0e0 !important;
-        color: var(--color-secondary);
-        background: transparent;
-    }
-
-    .dark-mode #additional-projects .tag-box span {
-        border: 2px solid #e0e0e0 !important;
-        color: var(--color-secondary-light);
-    }
 }
 
 /* Additional Projects Section */
@@ -1105,6 +1094,7 @@ video::-webkit-media-controls-start-playback-button {
     font-weight: bold;
 }
 
+
 .github-link, .case-study-link {
     color: var(--color-primary);
     text-decoration: none;
@@ -1144,7 +1134,12 @@ video::-webkit-media-controls-start-playback-button {
     color: var(--color-accent);
 }
 
-.dark-mode .github-link:hover, .dark-mode .case-study_link:hover {
+.dark-mode .github-link:hover {
+    background-color: rgba(255, 200, 0, 0.15); /* var(--color-accent) with alpha */
+    color: var(--color-accent);
+}
+
+.dark-mode .case-study-link:hover {
     background-color: rgba(255, 200, 0, 0.15); /* var(--color-accent) with alpha */
     color: var(--color-accent);
 }
@@ -1158,7 +1153,35 @@ video::-webkit-media-controls-start-playback-button {
     box-shadow: 0 0 0 1000px var(--color-primary)1A inset;
     opacity: 1;
 }
-.dark-mode .github-link:hover, .dark-mode .case-study-link:hover {
-    box-shadow: 0 0 0 1000px var(--color-accent)1A inset;
-    opacity: 1;
+
+.dark-mode #additional-projects {
+    background-color: var(--black);
+}
+
+.dark-mode .additional-project {
+    background-color: var(--container-bg-dark);
+    border: 1px solid var(--color-border-dark);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .project-header h3,
+.dark-mode .project-icon {
+    color: var(--color-accent);
+}
+
+.dark-mode .project-content p {
+    color: var(--color-secondary-light);
+}
+
+.dark-mode .tag-box span {
+    color: var(--color-secondary-light);
+    border-color: var(--color-secondary);
+}
+
+.dark-mode .github-link {
+    color: var(--color-accent);
+}
+
+.dark-mode .github-link:hover span.material-symbols-outlined {
+    color: var(--color-primary-dark);
 }

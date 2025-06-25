@@ -173,7 +173,7 @@ body.dark-mode {
     -webkit-backdrop-filter: blur(var(--sun-blur));
     backdrop-filter: blur(5px);
     filter: blur(var(--sun-blur));
-    z-index: -1;
+    z-index: 0; /* Place sun below all content, including section headers */
     transition: color var(--transition-main), background-color var(--transition-main);
     animation: grow 2s;
 }
@@ -232,7 +232,7 @@ body.dark-mode {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: 2; /* Ensure section headers are above the sun */
 }
 
 .section-title.two::before{
@@ -966,10 +966,6 @@ video::-webkit-media-controls-start-playback-button {
         padding: 0 3vw 2vw 3vw;
     }
 
-    .additional {
-
-    }
-
     .additional-project {
         padding: 1.5rem 2rem;
         margin: 0 0 1rem 0;
@@ -1117,7 +1113,7 @@ video::-webkit-media-controls-start-playback-button {
     font-weight: bold;
 }
 
-.github-link, .case-study-link {
+.github-link, .case-study-link,
 .github-link,
 .additional-project .github-link {
     color: var(--color-primary);
@@ -1132,7 +1128,6 @@ video::-webkit-media-controls-start-playback-button {
     justify-content: center;
     background-color: transparent;
     border: none;
-    border: none;
     font: inherit;
     cursor: pointer;
 }
@@ -1143,8 +1138,7 @@ video::-webkit-media-controls-start-playback-button {
     color: var(--color-primary);
 }
 
-.github-link:hover, .case-study-link:hover {
-    background-color: rgba(77, 0, 255, 0.15); /* var(--color-primary) with alpha */
+.github-link:hover, .case-study-link:hover,
 .github-link:hover,
 .additional-project .github-link:hover {
     background-color: rgba(77, 0, 255, 0.12); /* semi-transparent primary color */
@@ -1154,6 +1148,8 @@ video::-webkit-media-controls-start-playback-button {
 
 .github-link:hover span.material-symbols-outlined, .case-study-link:hover span.material-symbols-outlined {
     color: var(--color-primary);
+}
+
 .dark-mode .github-link,
 .dark-mode .additional-project .github-link {
     color: var(--color-accent);
@@ -1167,8 +1163,7 @@ video::-webkit-media-controls-start-playback-button {
     color: var(--color-accent);
 }
 
-.dark-mode .github-link:hover, .dark-mode .case-study_link:hover {
-    background-color: rgba(255, 200, 0, 0.15); /* var(--color-accent) with alpha */
+.dark-mode .github-link:hover, .dark-mode .case-study_link:hover,
 .dark-mode .github-link:hover,
 .dark-mode .additional-project .github-link:hover {
     background-color: rgba(255, 200, 0, 0.18); /* semi-transparent accent color */
@@ -1186,8 +1181,10 @@ video::-webkit-media-controls-start-playback-button {
     color: var(--color-accent);
 }
 
-.dark-mode .github-link:hover span.material-symbols-outlined, .dark-mode .case-study-link:hover span.material-symbols-outlined {
+.dark-mode .github-link:hover span.material-symbols-outlined, .dark-mode .case-study_link:hover span.material-symbols-outlined {
     color: var(--color-accent);
+}
+
 .dark-mode .project-content p {
     color: var(--color-secondary-light);
 }
@@ -1214,4 +1211,30 @@ video::-webkit-media-controls-start-playback-button {
 .dark-mode .github-link:hover, .dark-mode .case-study-link:hover {
     box-shadow: 0 0 0 1000px var(--color-accent)1A inset;
     opacity: 1;
+}
+
+#gradient-transition {
+    position: relative;
+    width: 100vw;
+    height: 5vw; /* Adjust as needed for the gradient height */
+    overflow: visible;
+    transform: translateY(4px) scaleX(1.01);
+    z-index: 2;
+}
+
+#gradient-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    object-fit: fill;
+    opacity: 1;
+    transform: none;
+    transform-origin: bottom;
+    transition: height 0.5s ease-out;
+    pointer-events: none;
+    z-index: -3;
 }

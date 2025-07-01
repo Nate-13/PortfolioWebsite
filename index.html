@@ -26,6 +26,7 @@
         <nav>
             <div id="menu">
                 <a href="#" class="menu-item">HOME</a>
+                <a href="#current-title" class="menu-item">CURRENTLY</a>
                 <a href="#projects-title" class="menu-item">PROJECTS</a>
                 <a href="#about-title" class="menu-item">ABOUT</a>
                 <a href="#contact-title" class="menu-item">CONTACT</a>
@@ -37,6 +38,7 @@
                 <a href="#contact-title" class="hidden"><span class="material-symbols-outlined end">send</span></a>
                 <a href="#about-title" class="hidden"><span class="material-symbols-outlined">contact_page</span></a>
                 <a href="#projects-title" class="hidden"><span class="material-symbols-outlined">contract</span></a>
+                <a href="#current-title" class="hidden"><span class="material-symbols-outlined">work</span></a>
                 <a href="#" class="hidden"><span class="material-symbols-outlined">home</span></a>
                 <button class="hidden" onclick="toggleDarkMode()"><span class="material-symbols-outlined secondary dark">dark_mode</span></button>
                 <button onclick="toggleMobileMenu()" id="btn-mobile-menu"><span class="material-symbols-outlined secondary main">menu</span></button>
@@ -53,8 +55,38 @@
             </div>    
         </div>
         
+        
+        
         <h1 class="section-title one" id="projects-title">PROJECTS</h1>
         <div id="projects">
+<!-- Currently Working On Section -->
+        <div id="current-work">
+            <div class="current-container">
+                <div class="current-content">
+                    <!-- Side Project Section -->
+                    <div class="current-project">
+                        <span class="project-label">Current Project</span>
+                        <h3 class="current-title">Otto - Idea Engine</h3>
+                        <p class="current-description">Building a new kind of collaborative AI interface made for brainstorming,
+                             note-taking, and organizing your thoughts naturally.</p>
+                    </div>
+                    
+                    <!-- Divider -->
+                    <div class="current-divider"></div>
+                    
+                    <!-- Current Work Section -->
+                    <div class="current-company">
+                        <span class="work-label">CURRENTLY WORKING AT</span>
+                        <!-- <h3 class="company-name">Seeking Opportunities</h3>
+                        <p class="company-role">Open to internships and entry-level positions</p> -->
+                        <!-- When you have a company, replace above with: -->
+                        <h3 class="company-name"><a href="https://specstory.com">SpecStory →</a></h3>
+                        <p class="company-role">Co-op (Software and Design)</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
 
             <!-- Aperture  -->
             <a href="/aperture/">

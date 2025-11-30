@@ -37,7 +37,7 @@ function updateCirclePosition(x, y) {
         move.animate({
             left: `${oppositeX}px`,
             top: `${oppositeY}px`,
-            width: SUN_SIZE, 
+            width: SUN_SIZE,
             height: SUN_SIZE,
             filter: `blur(${SUN_BLUR})`
         }, {duration: 1000, fill: "forwards"});
@@ -63,7 +63,7 @@ function updateSunColor() {
 // Update position on pointer move
 document.body.onpointermove = event => {
     if (isMobile()) return;
-    
+
     lastCursorX = event.clientX;
     lastCursorY = event.clientY;
     updateCirclePosition(lastCursorX, lastCursorY);
@@ -75,38 +75,24 @@ window.onscroll = () => {
     updateCirclePosition(lastCursorX, lastCursorY);
 };
 
-const darkMode = document.getElementById("btn-dark-mode");
-const icon = darkMode.querySelector("span.material-symbols-outlined");
-const mobileIcon = document.getElementById("btn-mobile-menu").querySelector("span.material-symbols-outlined.dark");
-
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode"); // Toggle dark-mode class on the body
-
-     // Toggle icon and button styles
-     if (icon.textContent === "dark_mode") {
-        icon.textContent = "light_mode";
-        darkMode.style.backgroundColor = "#F3EEFF";
-        darkMode.style.color = "#524D5C";
+// Apply dark mode based on system preference
+function applySystemTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark-mode');
     } else {
-        icon.textContent = "dark_mode";
-        darkMode.style.backgroundColor = "#524D5C";
-        darkMode.style.color = "#F3EEFF";
-    }
-
-    // Toggle mobile menu icon
-    if(mobileIcon.textContent === "dark_mode") {
-        mobileIcon.textContent = "light_mode";
-    }
-    else {
-        mobileIcon.textContent = "dark_mode";
+        document.body.classList.remove('dark-mode');
     }
     updateSunColor();
 }
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemTheme);
+
 const mobileMenu = document.getElementById("btn-mobile-menu");
 const hiddenElements = document.querySelectorAll(".mobile-menu a.hidden, .mobile-menu button.hidden");
 
 function toggleMobileMenu() {
-    
+
     hiddenElements.forEach(element => {
         // Check if the elements are currently hidden
         if (element.style.display === "none" || element.style.display === "") {
@@ -126,6 +112,6 @@ function toggleMobileMenu() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', updateSunColor);
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    applySystemTheme();
+});

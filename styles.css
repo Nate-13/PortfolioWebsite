@@ -382,36 +382,6 @@ video::-webkit-media-controls-start-playback-button {
     color:var(--color-accent);
 }
 
-#btn-dark-mode {
-    position: fixed;
-    bottom: 1.3rem;
-    right: 1.3rem;
-    width: var(--btn-dark-size);
-    height: var(--btn-dark-size);
-    padding: 0;
-    background-color: var(--color-secondary);
-    color: var(--color-secondary-light);
-    border: none;
-    border-radius: var(--btn-dark-radius);
-    cursor: pointer;
-    transition: ease 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-}
-
-#btn-dark-mode:hover {
-    scale: 1.05;
-}
-
-.button-container:hover .label {
-    display: block;
-}
-
-#btn-dark-mode span {
-    font-size: 36px;
-}
 
 .right-container {
     display: flex;
@@ -769,10 +739,6 @@ video::-webkit-media-controls-start-playback-button {
     }
 
     #menu {
-        display: none;
-    }
-
-    #btn-dark-mode {
         display: none;
     }
 

@@ -21,8 +21,13 @@ function getCurrentSunColor() {
     return document.body.classList.contains('dark-mode') ? COLOR_SUN_DARK : COLOR_SUN_LIGHT;
 }
 
+// Track if animations have been initialized
+let animationsInitialized = false;
+
 // Function to update circle position and color
 function updateCirclePosition(x, y) {
+    if (!animationsInitialized) return; // Don't animate until user interaction
+    
     const headerRect = header.getBoundingClientRect();
     // Only animate position, size, and blur. Color is set instantly elsewhere.
     if (
@@ -63,6 +68,11 @@ function updateSunColor() {
 // Update position on pointer move
 document.body.onpointermove = event => {
     if (isMobile()) return;
+    
+    // Initialize animations on first movement
+    if (!animationsInitialized) {
+        animationsInitialized = true;
+    }
 
     lastCursorX = event.clientX;
     lastCursorY = event.clientY;

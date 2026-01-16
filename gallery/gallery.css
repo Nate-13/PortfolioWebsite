@@ -299,7 +299,7 @@ html{
         margin-top: 2rem;
     }
 
-    #header span {
+    #header .arrow {
         margin-top: 2rem;
         font-size: 3rem;
     }

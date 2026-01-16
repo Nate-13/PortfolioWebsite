@@ -1,5 +1,5 @@
 :root {
-    --color-bg-light: #F3EEFF;
+    --color-bg-light: #F8F8F8;
     --color-bg-dark: #1E0640;
     --color-sun: #FFC800;
     --color-sun-dark: #123CE7;
@@ -7,7 +7,7 @@
     --color-primary: #4D00FF;
     --color-primary-dark: #FFC228;
     --color-secondary: #524D5C;
-    --color-secondary-light: #F3EEFF;
+    --color-secondary-light: #F8F8F8;
     --color-accent: #FFC800;
     --color-accent-dark: #123CE7;
     --color-border-light: #F3EEFF75;
@@ -28,9 +28,9 @@
     --sun-size: 35vw;
     --sun-blur: 5vw;
     --container-radius: 0.5rem;
-    --container-bg-light: #F3EEFF60;
+    --container-bg-light: #F8F8F860;
     --container-bg-dark: #1E064060;
-    --container-border-light: #F3EEFF75;
+    --container-border-light: #F8F8F875;
     --container-border-dark: #1E064075;
 }
 
@@ -367,7 +367,7 @@ video::-webkit-media-controls-start-playback-button {
     padding: 0.75rem 1.25rem;
     font-weight: normal;
     font-style: normal;
-    background-color: #F3EEFFD0;
+    background-color: #F8F8F8D0;
     border-radius: var(--container-radius);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
@@ -906,7 +906,7 @@ video::-webkit-media-controls-start-playback-button {
         right: 20px;
         width: auto;
         height: auto;
-        background-color: #F3EEFF50;
+        background-color: #F8F8F850;
         z-index: 6;
         transition: transform 0.2s ease;
         gap: 8.5px;

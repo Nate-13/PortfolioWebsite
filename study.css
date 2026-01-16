@@ -1,8 +1,35 @@
+:root {
+    --color-bg-light: #F3EEFF;
+    --color-bg-dark: #1E0640;
+    --color-primary: #4D00FF;
+    --color-primary-dark: #FFC228;
+    --color-secondary: #524D5C;
+    --color-secondary-light: #F3EEFF;
+    --color-accent: #FFC800;
+    --color-accent-dark: #123CE7;
+}
+
 html{
     font-family: 'Arimo', sans-serif;
-    background-color: #F3EEFF;
+    background-color: var(--color-bg-light);
     font-size: 16px;
     animation: load 1s;
+    transition: background-color 0.5s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-light);
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: var(--color-bg-dark);
+}
+
+body.dark-mode html {
+    background-color: var(--color-bg-dark);
 }
 
 #header{
@@ -56,40 +83,65 @@ a{
 .title{
     font-size: 15vw;
     font-style: bold;
-    color: #4D00FF;
+    color: var(--color-primary);
     margin: 0;
     transform: translateX(-0.8vw);
     line-height: 1;
+    transition: color 0.5s ease;
+}
+
+.dark-mode .title {
+    color: var(--color-accent);
 }
 
 .subtitle{
     font-size: 3rem;
-    color: #524D5C;
+    color: var(--color-secondary);
     margin: 0;
     width: 75%;
     margin-bottom: 3rem;
+    transition: color 0.5s ease;
+}
+
+.dark-mode .subtitle {
+    color: var(--color-secondary-light);
 }
 
 #header h2{
     font-size: 2rem;
-    color: #4D00FF;
+    color: var(--color-primary);
     margin: 0;
     margin-bottom: 1rem;
+    transition: color 0.5s ease;
+}
+
+.dark-mode #header h2 {
+    color: var(--color-accent);
 }
 
 #header span{
     font-size: 2rem;
-    color: #524D5C;
+    color: var(--color-secondary);
     font-weight: normal;
     margin: 0;
+    transition: color 0.5s ease;
+}
+
+.dark-mode #header span {
+    color: var(--color-secondary-light);
 }
 
 #header h3{
     font-size: 1.5rem;
-    color: #524D5C;
+    color: var(--color-secondary);
     font-weight: normal;
     font-style: italic;
     margin: 0;
+    transition: color 0.5s ease;
+}
+
+.dark-mode #header h3 {
+    color: var(--color-secondary-light);
 }
 
 .tag-box{
@@ -103,14 +155,20 @@ a{
 
 #header .tag-box span{
     font-size: 1.25rem;
-    color: #524D5C;
+    color: var(--color-secondary);
     margin: 0;
     margin-right: 1rem;
     margin-top: 1rem;
-    border: 3px #524D5C50 solid;
+    border: 3px solid rgba(82, 77, 92, 0.3);
     padding: 0.25rem 1.25rem;
     border-radius: 2rem;
     font-weight: bold;
+    transition: color 0.5s ease, border-color 0.5s ease;
+}
+
+.dark-mode #header .tag-box span {
+    color: #d1d1d1;
+    border-color: #d1d1d1;
 }
 
 .content{
@@ -162,25 +220,41 @@ a{
 
 .section h2{
     font-size: 4rem;
-    color: #4D00FF;
+    color: var(--color-primary);
     margin: 0;
     margin-bottom: 1rem;
+    transition: color 0.5s ease;
+}
+
+.dark-mode .section h2 {
+    color: var(--color-accent);
 }
 
 .section p, .list {
     font-size: 1.75rem;
-    color: #524D5C;
+    color: var(--color-secondary);
     margin: 0;
     margin-bottom: 1rem;
     width: 75%;
     line-height: 1.2;
+    transition: color 0.5s ease;
+}
+
+.dark-mode .section p, .dark-mode .list {
+    color: var(--color-secondary-light);
 }
 
 .section p span, .list span {
     color: #17004b;
     font-style: italic;
     font-weight: 600;
-    background-color: #4D00FF20;
+    background-color: rgba(77, 0, 255, 0.2);
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.dark-mode .section p span, .dark-mode .list span {
+    color: var(--color-accent);
+    background-color: rgba(255, 200, 40, 0.2);
 }
 
 .spacer{
@@ -194,14 +268,24 @@ a{
     padding: 1rem 1rem;
     width: 100%;
     box-sizing: border-box;
-    border-top: 3px solid #4D00FF;
+    border-top: 3px solid var(--color-primary);
+    transition: border-color 0.5s ease;
+  }
+  
+  .dark-mode #footer {
+    border-top-color: var(--color-accent);
   }
   
   #footer h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: #4D00FF;
+    color: var(--color-primary);
     font-weight: normal;
+    transition: color 0.5s ease;
+  }
+  
+  .dark-mode #footer h2 {
+    color: var(--color-secondary-light);
   }
   
   #footer div {
@@ -212,12 +296,20 @@ a{
   #footer a {
     text-decoration: none;
     font-size: 1.5rem; 
-    color: #4D00FF; 
+    color: var(--color-primary); 
     transition: color 0.2s ease;
   }
   
+  .dark-mode #footer a {
+    color: var(--color-secondary-light);
+  }
+  
   #footer a:hover {
-    color: #00000075;
+    color: var(--color-accent);
+  }
+  
+  .dark-mode #footer a:hover {
+    color: var(--color-accent-dark);
   }
 
 
@@ -226,7 +318,7 @@ a{
     bottom: 50px;
     font-size: 3rem;
     cursor: pointer;
-    color: #4D00FF;
+    color: var(--color-primary);
     transition: all 0.4s ease;
     font-weight: 300;
     z-index: 100;
@@ -234,11 +326,19 @@ a{
     margin: 0% 5% 5% 2%;
 }
 
+.dark-mode .exit {
+    color: var(--color-accent);
+}
+
 .exit a{
     text-decoration: none;
-    color: #4D00FF;
+    color: var(--color-primary);
     transition: all 0.2s ease;
     font-weight: bold;
+}
+
+.dark-mode .exit a {
+    color: var(--color-accent);
 }
 
 .exit span{
@@ -262,12 +362,17 @@ a{
 
 #credits h2{
     font-size: 1rem;
-    color: #524D5C;
+    color: var(--color-secondary);
     font-style: italic;
     font-weight: normal;
     margin: 0;
     padding-left: 5%;
     padding-bottom: 5%;
+    transition: color 0.5s ease;
+}
+
+.dark-mode #credits h2 {
+    color: var(--color-secondary-light);
 }
 
 .app-btn{
@@ -353,7 +458,11 @@ a{
     
     #footer{
         padding: 0.5rem 1rem;
-        border-top: 1px solid #4D00FF;
+        border-top: 1px solid var(--color-primary);
+    }
+    
+    .dark-mode #footer {
+        border-top: 1px solid var(--color-accent);
     }
 
     #footer h2{

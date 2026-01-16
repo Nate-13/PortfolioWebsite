@@ -121,7 +121,7 @@
 
     <div class="exit">
         <span class="material-symbols-outlined">arrow_back_ios</span>
-        <a href="https://nateborwick.com">EXIT</a>
+        <a href="/">EXIT</a>
     </div>
 
     <div id="credits">
@@ -136,6 +136,22 @@
         </div>
     </div>
     
+    <script>
+        // Apply dark mode based on system preference
+        function applySystemTheme() {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        }
+        
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemTheme);
+        
+        // Apply on page load
+        document.addEventListener('DOMContentLoaded', applySystemTheme);
+    </script>
 
 </body>
 </html>

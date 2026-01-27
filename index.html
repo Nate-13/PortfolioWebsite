@@ -28,15 +28,32 @@
             </div>
         </nav>
 
-        <nav>
-            <div class="mobile-menu" id="btn-mobile-menu">
-                <a href="#contact-title" class="hidden"><span class="material-symbols-outlined end">send</span></a>
-                <a href="#about-title" class="hidden"><span class="material-symbols-outlined">contact_page</span></a>
-                <a href="#projects-title" class="hidden"><span class="material-symbols-outlined">contract</span></a>
-                <a href="#current-title" class="hidden"><span class="material-symbols-outlined">work</span></a>
-                <a href="#" class="hidden"><span class="material-symbols-outlined">home</span></a>
-                <button onclick="toggleMobileMenu()" id="btn-mobile-menu"><span class="material-symbols-outlined secondary main">menu</span></button>
+        <nav class="mobile-menu" id="mobile-menu">
+            <div class="mobile-nav-items">
+                <a href="#contact-title" class="mobile-nav-item">
+                    <span class="nav-label">Contact</span>
+                    <span class="material-symbols-outlined">send</span>
+                </a>
+                <a href="#about-title" class="mobile-nav-item">
+                    <span class="nav-label">About</span>
+                    <span class="material-symbols-outlined">contact_page</span>
+                </a>
+                <a href="#projects-title" class="mobile-nav-item">
+                    <span class="nav-label">Projects</span>
+                    <span class="material-symbols-outlined">contract</span>
+                </a>
+                <a href="#current-title" class="mobile-nav-item">
+                    <span class="nav-label">Work</span>
+                    <span class="material-symbols-outlined">work</span>
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <span class="nav-label">Home</span>
+                    <span class="material-symbols-outlined">home</span>
+                </a>
             </div>
+            <button class="mobile-fab" id="mobile-fab" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
         </nav>
 
          <div id="header">

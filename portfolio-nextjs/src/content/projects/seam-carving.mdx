@@ -1,0 +1,47 @@
+---
+title: "SEAM CARVING"
+slug: "seam-carving"
+subtitle: "Exploring a seam-carving algorithm to intelligently compress images."
+date: "April 2024"
+timeframe: "2 Weeks"
+tags: ["Java", "JFrame", "Algorithms", "Data Structures"]
+thumbnail: "/projects/seam-carving/png-compression.mp4"
+thumbnailType: "video"
+description: "Exploring a seam-carving algorithm to intelligently compress images while preserving subjects."
+order: 4
+featured: true
+---
+
+<ImageSection src="/projects/seam-carving/png-compression.mp4" type="video" />
+
+## Research, Graphs, and Algorithms.
+
+This project explores the seam carving algorithm, a content-aware image resizing technique. Unlike traditional scaling that uniformly shrinks or stretches an image, seam carving intelligently removes or adds pixels along "seams" - paths of lowest importance through the image. This allows for resizing that preserves the most important visual content while removing less significant areas.
+
+<Spacer />
+
+<ImageSection src="/projects/seam-carving/png-energyMap.png" type="image" />
+
+<Spacer />
+
+<ImageSection src="/projects/seam-carving/png-calculatingSeams.png" type="image" />
+
+## Calculating energy and finding seams.
+
+The algorithm works by first computing an "energy map" of the image, where each pixel's energy represents how important it is visually. High-energy pixels are typically edges or areas of high contrast that should be preserved. The algorithm then finds the lowest-energy seam - a connected path from top to bottom (or left to right) - using dynamic programming to efficiently calculate the minimum cumulative energy path.
+
+<Spacer />
+
+<ImageSection src="/projects/seam-carving/png-bothDirections.png" type="image" />
+
+## Compression?
+
+By repeatedly finding and removing the lowest-energy seams, the image can be made smaller while keeping the important features intact. The subjects and key visual elements remain largely undistorted because the algorithm preferentially removes low-energy background areas rather than cutting through high-energy regions like faces or objects.
+
+<Spacer />
+
+<ImageSection src="/projects/seam-carving/png-familyExample.png" type="image" />
+
+## Editing image aspect ratios.
+
+One of the most powerful applications of seam carving is changing an image's aspect ratio without the typical distortion you'd see from simple stretching or cropping. This makes it particularly useful for adapting images to different screen sizes or layouts while maintaining the visual integrity of the important content in the image.

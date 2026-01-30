@@ -1,0 +1,52 @@
+---
+title: "APERTURE"
+slug: "aperture"
+subtitle: "AI-powered resume optimization app for developers."
+date: "June 2025"
+timeframe: "3 Weeks"
+tags: ["Android Development", "Kotlin", "Jetpack Compose", "Room", "Retrofit", "APIs"]
+thumbnail: "/projects/aperture/aperture-demo-video.mp4"
+thumbnailType: "video"
+description: "AI-powered resume optimization app for developers."
+order: 1
+featured: true
+credits: "Created with Logan Gill and Anthony Campos for our CS 4520 Final Project"
+---
+
+<ImageSection src="/projects/aperture/aperture-demo-video.mp4" type="video" />
+
+## A Different Dev Tool
+
+For my CS4520 Mobile Application Development final, my team of three set out to make something that would actually help developers (like us) stand out and improve our job-search experience. We call it Aperture. Most dev tools are dark and serious but we designed Aperture in Figma with a bright, friendly vibe. I worked primarily on the design, login, onboarding, the OpenAI backend, and the Quick Project tool. We built it all in Kotlin using Jetpack Compose, with Room for local storage and Retrofit for API calls.
+
+<Spacer />
+
+<ImageSection src="/projects/aperture/aperture-login-flow.png" type="image" />
+
+## Login & Onboarding Flow
+
+Getting started with Aperture is super simple. First, you enter your GitHub username on the login page. Then, the onboarding flow asks what kind of developer you are (like Mobile, Web, AI/ML, etc.) and your skill level. This helps Aperture personalize project ideas and resume content for you. Once you're in, the home page shows all your saved projects and repo extractions, so you can revisit or delete them whenever you want.
+
+<Spacer />
+
+<ImageSection src="/projects/aperture/aperture-quick-project-flow.png" type="image" />
+
+## Quick Project
+
+Ever want to build something new but have no idea where to start? Quick Project fixes that. You tell Aperture what you want to learn or add to your resume (like "Kotlin", "APIs", or even more general like "Finance" or "Health"). It uses GPT-4.1 to come up with a unique project idea just for you, taking into account your skill level and developer type. All your generated ideas are saved to the home screen, so you can revisit or delete them whenever.
+
+<Spacer />
+
+<ImageSection src="/projects/aperture/aperture-repo-extractor-flow.png" type="image" />
+
+## Repo Extractor
+
+Writing project descriptions for your resume is hard. Repo Extractor connects to your GitHub (public repos for now), lets you pick a project, and uses GPT-4.1 to write a resume-ready description. It even saves your extractions so you can copy them later. We used the GitHub API and OpenAI API for this, and everything is stored locally with Room so you can access it, even when offline.
+
+<Spacer />
+
+<ImageSection src="/projects/aperture/aperture-title.png" type="image" />
+
+## The Future Scope
+
+We had a ton of ideas we didn't get to. We want to make Repo Extractor smarter, let users connect private repos, or even link to personal websites. Dark mode is on the list (even though I love the light theme). I'd also love to add a Resume Reviser that tailors your resume to job descriptions, and maybe even generalize Aperture for other fields, not just developers.

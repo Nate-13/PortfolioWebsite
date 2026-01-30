@@ -1,48 +1,36 @@
-# Portfolio Website 🌐
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Setting Out to Stand Out 🎨
+## Getting Started
 
-Creating my portfolio website was an important project for me, as it allowed me to merge my design and coding skills. I wanted the site to reflect my personality and approach to work, which led me to choose a bright, energetic color palette of complementary blue-purple and yellow. Bold fonts and capital letters gave the design a stronger visual identity while remaining modern. My goal was to strike a balance between professional, personal, and exciting. I wanted visitors to leave with a clear understanding of who I am and what I can create. The container that houses my work is a reflection of my work itself, so I wanted to make sure this website was beautiful, useful, and functional.
+First, run the development server:
 
-![Portfolio Homepage](https://github.com/Nate-13/PortfolioWebsite/blob/main/media/website-mockup.png) 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Designing Through Development 🛠️
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-I began by designing the site in Figma, where I created layouts for a few pages. However, as someone new to web development, translating my design into code brought many challenges. The website evolved as I started coding, with simplifications made to accommodate my growing understanding of HTML, CSS, and JavaScript. This iterative process taught me how design and development inform one another, especially when you're learning and doing both simultaneously. Starting with zero knowledge of web development, I worked one section at a time, researching and solving problems to create a responsive and interactive website that aligns with my initial design vision.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-![Figma Design](https://github.com/Nate-13/PortfolioWebsite/blob/main/portfolio/media/portfolio-figma.png) 
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## Features ✨
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- **Responsive Design** 📱: The website is fully responsive.  
-- **Interactive Elements** 🖱️: JavaScript was used to add interactivity, dynamic buttons, and mouse effects.  
-- **Clean Layout** 🧹: A simple but bold layout that emphasizes my work and personality.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-![Mobile Site](https://github.com/Nate-13/PortfolioWebsite/blob/main/portfolio/media/portfolio-mobile.png) 
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-
-## Looking Back 🔍
-
-While I'm proud of the outcome, I can now see countless opportunities for improvement. Since building this website, I've learned more advanced techniques like React.js, CSS variables, and modern development practices, all of which would streamline and elevate the site today. These changes would simplify the source code and allow for easier updating and additions. I plan on someday revisiting this project to implement these improvements, but for now, I'm happy with the site as it stands.
-
----
-
-## Technologies Used 💻
-
-- **HTML**: For structuring the content.  
-- **CSS**: For styling and creating the visual design.  
-- **JavaScript**: For adding interactivity and dynamic features.  
-- **Figma**: For initial design and prototyping.  
----
-
-## How to Explore 🔗
-
-Feel free to visit the live site [here](https://nateborwick.com/) or check out the code in this repository. If you have any feedback or suggestions, I'd love to hear from you!
-
----
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

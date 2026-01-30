@@ -19,7 +19,7 @@ export default function Navigation() {
   return (
     <nav
       id="menu"
-      className="animate-load-in fixed right-[1.3vw] top-[1.3vw] z-50 hidden flex-col items-end justify-center font-bold lg:flex"
+      className="animate-load-in fixed right-[1.3vw] top-[1.3vw] z-50 flex-col items-end justify-center font-bold"
     >
       {menuItems.map((item) => (
         <a

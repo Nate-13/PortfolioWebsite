@@ -23,7 +23,8 @@ export default function MobileMenu() {
 
   return (
     <nav
-      className={`fixed bottom-5 right-5 z-[100] flex flex-col items-end gap-2.5 lg:hidden ${
+      id="mobile-menu"
+      className={`mobile-menu fixed bottom-5 right-5 z-[100] flex flex-col items-end gap-2.5 ${
         isExpanded ? "expanded" : ""
       }`}
     >
@@ -62,7 +63,7 @@ export default function MobileMenu() {
         onClick={toggle}
         aria-label="Toggle navigation menu"
         aria-expanded={isExpanded}
-        className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-[28px] border-none bg-[var(--color-primary)] shadow-[0_4px_20px_rgba(77,0,255,0.4)] transition-all duration-200 ease-in-out active:scale-[0.92] dark:bg-[var(--color-accent)] dark:shadow-[0_4px_20px_rgba(255,200,0,0.4)]"
+        className="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border-none bg-[var(--color-primary)] shadow-[0_4px_20px_rgba(77,0,255,0.4)] transition-all duration-200 ease-in-out active:scale-[0.92] dark:bg-[var(--color-accent)] dark:shadow-[0_4px_20px_rgba(255,200,0,0.4)]"
       >
         <span
           className={`material-symbols-outlined text-[28px] text-white transition-transform duration-[0.25s] ease-[cubic-bezier(0.34,1.56,0.64,1)] dark:text-[var(--color-bg-dark)] ${

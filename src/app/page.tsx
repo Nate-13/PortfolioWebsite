@@ -1,5 +1,4 @@
 import Navigation from "@/components/layout/Navigation";
-import MobileMenu from "@/components/layout/MobileMenu";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/home/Header";
 import CurrentWork from "@/components/home/CurrentWork";
@@ -99,7 +98,6 @@ export default function Home() {
   return (
     <div className="relative flex w-full max-w-full flex-col items-start justify-center overflow-x-hidden">
       <Navigation />
-      <MobileMenu />
 
       <Header />
 

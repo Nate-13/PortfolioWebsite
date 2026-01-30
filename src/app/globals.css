@@ -271,4 +271,24 @@ html:not(.dark) body {
   html {
     font-size: 10px;
   }
+
+  #menu {
+    display: none !important;
+  }
+
+  /* Mobile Menu - Visible on smaller screens */
+  .mobile-menu {
+    display: flex !important;
+  }
+}
+
+/* Desktop: hide mobile menu, show desktop nav */
+@media (min-width: 1251px) {
+  .mobile-menu {
+    display: none !important;
+  }
+
+  #menu {
+    display: flex !important;
+  }
 }

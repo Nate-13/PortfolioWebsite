@@ -71,7 +71,8 @@ const additionalProjects = [
   },
   {
     title: "Nothing: Community Edition",
-    description: "My submissions for the Nothing Community Edition Project 2025.",
+    description:
+      "My submissions for the Nothing Community Edition Project 2025.",
     icon: "layers",
     tags: ["Product Design", "UI/UX", "Figma"],
     caseStudyUrl: "/nothing/",
@@ -105,7 +106,10 @@ export default function Home() {
         PROJECTS
       </SectionTitle>
 
-      <section id="projects" className="h-auto w-full flex-col items-center justify-center">
+      <section
+        id="projects"
+        className="h-auto w-full flex-col items-center justify-center"
+      >
         <CurrentWork />
 
         {featuredProjects.map((project) => (

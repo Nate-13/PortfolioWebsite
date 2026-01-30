@@ -12,7 +12,10 @@ const menuItems = [
 export default function MobileMenu() {
   const { isExpanded, toggle, close } = useMobileMenu();
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     close();
     const element = document.querySelector(href);

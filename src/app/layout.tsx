@@ -48,12 +48,12 @@ export default function RootLayout({
       </head>
       <body className="font-[family-name:var(--font-arimo)]">
         <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-              storageKey="theme"
-            >
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          storageKey="theme"
+        >
           <MobileMenu />
           {children}
         </ThemeProvider>

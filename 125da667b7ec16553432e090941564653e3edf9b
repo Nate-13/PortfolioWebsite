@@ -1,0 +1,37 @@
+portfolio-nextjs/src/components/layout/MobileMenu.tsx
+  b478da224cf83407 15-23,40,43,56
+portfolio-nextjs/src/components/home/AboutSection.tsx
+  b478da224cf83407 9,12,18,25,37,40,49,66
+portfolio-nextjs/src/components/layout/Navigation.tsx
+  b478da224cf83407 11-18,25,28
+portfolio-nextjs/src/components/layout/Footer.tsx
+  b478da224cf83407 11,13-14,19,21,27,29,35,37
+portfolio-nextjs/src/components/project/ProjectContent.tsx
+  b478da224cf83407 66-67,71,73-78
+portfolio-nextjs/src/app/globals.css
+  b478da224cf83407 74-75,120-130,163,175,243-246,251-255
+portfolio-nextjs/src/components/home/SectionTitle.tsx
+  b478da224cf83407 19
+portfolio-nextjs/src/app/layout.tsx
+  b478da224cf83407 43-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "125da667b7ec16553432e090941564653e3edf9b",
+  "prompts": {
+    "b478da224cf83407": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "81499094-cf1b-44c5-808e-3292a8092e66",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Nate-13 <149812512+Nate-13@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 113,
+      "total_deletions": 65,
+      "accepted_lines": 93,
+      "overriden_lines": 0
+    }
+  }
+}

@@ -1,0 +1,29 @@
+src/app/layout.tsx
+  b478da224cf83407 4,57
+src/app/globals.css
+  b478da224cf83407 274-293
+src/components/layout/MobileMenu.tsx
+  b478da224cf83407 26-27,66
+src/components/layout/Navigation.tsx
+  b478da224cf83407 22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "7c62d43619af2593cbbc4797c4df4d277cd21170",
+  "prompts": {
+    "b478da224cf83407": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "81499094-cf1b-44c5-808e-3292a8092e66",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Nate-13 <149812512+Nate-13@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 41,
+      "total_deletions": 20,
+      "accepted_lines": 26,
+      "overriden_lines": 0
+    }
+  }
+}

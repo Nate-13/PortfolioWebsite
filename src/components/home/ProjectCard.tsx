@@ -1,7 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { useRef } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+import {
+  triggerProjectTransition,
+  storeCardRect,
+} from "@/components/transition/ProjectTransition";
 
 interface ProjectCardProps {
   slug: string;
@@ -18,10 +23,50 @@ export default function ProjectCard({
   thumbnail,
   thumbnailType,
 }: ProjectCardProps) {
+  const router = useRouter();
+  const thumbnailRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = () => {
+    if (thumbnailRef.current) {
+      const rect = thumbnailRef.current.getBoundingClientRect();
+
+      // Store for exit animation
+      storeCardRect(slug, rect, thumbnail, thumbnailType);
+
+      // Trigger the expansion animation
+      triggerProjectTransition({
+        rect,
+        thumbnail,
+        thumbnailType,
+        slug,
+      });
+
+      // Navigate immediately - page fades in as overlay fades out
+      router.push(`/${slug}/`);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleClick();
+    }
+  };
+
   return (
-    <Link href={`/${slug}/`} className="no-underline">
+    <div
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      role="link"
+      tabIndex={0}
+      className="cursor-pointer no-underline"
+      aria-label={`View ${title} project`}
+    >
       <div className="scroll-animate relative mx-[5vw] mb-[3vw] mr-[13.5vw] flex flex-col items-center justify-between p-0 transition-all duration-500 max-lg:mx-[3vw] max-lg:mb-[10vw] max-lg:rounded-[1.25rem] max-lg:pb-0 max-lg:pt-8">
-        <div className="flex w-full items-center justify-center">
+        <div
+          ref={thumbnailRef}
+          className="flex w-full items-center justify-center"
+        >
           {thumbnailType === "video" ? (
             <video
               autoPlay
@@ -51,6 +96,6 @@ export default function ProjectCard({
           {description}
         </h2>
       </div>
-    </Link>
+    </div>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Arimo, Montserrat } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import MobileMenu from "@/components/layout/MobileMenu";
+import ProjectTransition from "@/components/transition/ProjectTransition";
 import "./globals.css";
 
 const arimo = Arimo({
@@ -55,6 +56,7 @@ export default function RootLayout({
           storageKey="theme"
         >
           <MobileMenu />
+          <ProjectTransition />
           {children}
         </ThemeProvider>
       </body>

@@ -75,8 +75,10 @@
 }
 
 #gallery-header .arrow {
-  padding-top: 3vw;
+  padding-top: 2vw;
+  padding-bottom: 3vw;
   font-size: 5rem;
+  color: var(--text-color);
   animation: gallery-bounce 4s infinite;
 }
 
@@ -289,7 +291,9 @@
 
   #gallery-header .arrow {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     font-size: 3rem;
+    color: var(--text-color);
   }
 
   .wall {

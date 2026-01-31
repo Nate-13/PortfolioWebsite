@@ -1,0 +1,35 @@
+src/app/layout.tsx
+  0894e2124d52b7d4 5,59
+src/components/project/ExitButton.tsx
+  0894e2124d52b7d4 3-8,11-79,81-83,85,88
+src/app/globals.css
+  0894e2124d52b7d4 295-305
+src/app/gallery/gallery.css
+  0894e2124d52b7d4 78-79,81,294,296
+src/app/template.tsx
+  0894e2124d52b7d4 3-5,7-26,29-30
+src/components/transition/ProjectTransition.tsx
+  0894e2124d52b7d4 1-30,32-41,43-55,57-123,125-131,133-142,144-150,152-186
+src/components/home/ProjectCard.tsx
+  0894e2124d52b7d4 3-4,6-9,26-55,57-63,67,99
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "d449f9c923b1892594d8d7cfb03d2670b83a9233",
+  "prompts": {
+    "0894e2124d52b7d4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "84c67bc5-a386-4f0a-a2df-5ec6922fcae4",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Nate-13 <149812512+Nate-13@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 805,
+      "total_deletions": 355,
+      "accepted_lines": 493,
+      "overriden_lines": 9
+    }
+  }
+}

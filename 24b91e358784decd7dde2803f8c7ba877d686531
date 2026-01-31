@@ -1,0 +1,25 @@
+src/app/page.tsx
+  ee38a1f7f10bf178 16,24,33,42,51,60
+src/components/home/ProjectCard.tsx
+  ee38a1f7f10bf178 14,23,94,97-103,106-108
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "24b91e358784decd7dde2803f8c7ba877d686531",
+  "prompts": {
+    "ee38a1f7f10bf178": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "47f88692-2559-47ee-8058-d3dee92e149f",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Nate-13 <149812512+Nate-13@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 28,
+      "total_deletions": 11,
+      "accepted_lines": 19,
+      "overriden_lines": 0
+    }
+  }
+}

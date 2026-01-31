@@ -1,18 +1,31 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
+
 const menuItems = [
   { label: "HOME", href: "#header" },
-  { label: "PROJECTS", href: "#projects" },
-  { label: "ABOUT", href: "#about" },
-  { label: "CONTACT", href: "#contact" },
+  { label: "PROJECTS", href: "#projects-title" },
+  { label: "ABOUT", href: "#about-title" },
+  { label: "CONTACT", href: "#contact-title" },
 ];
 
 export default function Navigation() {
+  const pathname = usePathname();
+  const router = useRouter();
+
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string,
   ) => {
     e.preventDefault();
+
+    // If not on home page, navigate to home with hash
+    if (pathname !== "/") {
+      router.push("/" + href);
+      return;
+    }
+
+    // On home page, scroll to element
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

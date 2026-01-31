@@ -1,16 +1,19 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
 import { useMobileMenu } from "@/hooks/useMobileMenu";
 
 const menuItems = [
   { label: "HOME", href: "#header", icon: "home" },
-  { label: "PROJECTS", href: "#projects", icon: "work" },
-  { label: "ABOUT", href: "#about", icon: "person" },
-  { label: "CONTACT", href: "#contact", icon: "mail" },
+  { label: "PROJECTS", href: "#projects-title", icon: "work" },
+  { label: "ABOUT", href: "#about-title", icon: "person" },
+  { label: "CONTACT", href: "#contact-title", icon: "mail" },
 ];
 
 export default function MobileMenu() {
   const { isExpanded, toggle, close } = useMobileMenu();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -18,6 +21,14 @@ export default function MobileMenu() {
   ) => {
     e.preventDefault();
     close();
+
+    // If not on home page, navigate to home with hash
+    if (pathname !== "/") {
+      router.push("/" + href);
+      return;
+    }
+
+    // On home page, scroll to element
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

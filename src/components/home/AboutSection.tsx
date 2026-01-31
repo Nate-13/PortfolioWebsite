@@ -59,11 +59,11 @@ export default function AboutSection() {
       </div>
 
       {/* Resume Button */}
-      <div className="flex w-full flex-row items-center justify-center">
+      <div className="mt-16 flex w-full flex-row items-center justify-center">
         <button
           type="button"
           onClick={() => window.open("/media/Nate_Borwick_Resume.pdf")}
-          className="resume-btn mr-[1vw] flex h-[3rem] w-auto items-center justify-center rounded-[3vw] border-none bg-[var(--color-primary)] px-[5%] text-[2rem] font-bold text-[var(--color-secondary-light)] no-underline transition-[transform,background-color,color] duration-200 hover:scale-[1.03] hover:bg-[var(--color-accent)] hover:text-[var(--color-secondary)] hover:[animation-play-state:paused] dark:bg-[var(--color-accent)] dark:text-[var(--color-bg-dark)] dark:hover:bg-[var(--color-sun-dark)] dark:hover:[animation-play-state:paused] max-lg:h-[4rem] max-lg:rounded-[2.5rem] max-lg:px-[5%] max-lg:text-[2rem]"
+          className="resume-btn flex h-[4rem] w-auto cursor-pointer items-center justify-center rounded-full border-none bg-[var(--color-primary)] px-10 text-[1.75rem] font-bold text-white no-underline transition-all duration-200 hover:scale-105 hover:brightness-110 dark:bg-[var(--color-accent)] dark:text-[var(--color-bg-dark)] dark:hover:brightness-110 max-lg:h-[3.5rem] max-lg:px-8 max-lg:text-[1.5rem]"
         >
           Download my Resume
         </button>

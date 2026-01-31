@@ -22,7 +22,7 @@ const contacts = [
 
 export default function ContactSection() {
   return (
-    <section className="flex w-full flex-col items-center justify-center pb-[5vw]">
+    <section id="contact" className="flex w-full flex-col items-center justify-center pb-[5vw]">
       {contacts.map((contact) => {
         // Find the 'i' in the label and wrap it in a span
         const iIndex = contact.label.toLowerCase().indexOf("i");

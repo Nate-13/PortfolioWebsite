@@ -20,19 +20,19 @@ const components = {
   ),
   p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className="mb-4 pl-[5%] pr-[15%] text-[1.75rem] leading-[1.2] text-[var(--color-secondary)] dark:text-[var(--color-secondary-light)] max-lg:pr-[5%] max-lg:text-[1.5rem]"
+      className="mb-4 max-w-[1400px] pl-[5%] pr-[5%] text-[1.75rem] leading-[1.2] text-[var(--color-secondary)] dark:text-[var(--color-secondary-light)] max-lg:text-[1.5rem]"
       {...props}
     />
   ),
   ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
     <ul
-      className="mb-4 list-disc pl-[8%] pr-[15%] text-[1.75rem] leading-[1.4] text-[var(--color-secondary)] dark:text-[var(--color-secondary-light)] max-lg:pr-[5%] max-lg:text-[1.5rem]"
+      className="mb-4 max-w-[1400px] list-disc pl-[8%] pr-[5%] text-[1.75rem] leading-[1.4] text-[var(--color-secondary)] dark:text-[var(--color-secondary-light)] max-lg:text-[1.5rem]"
       {...props}
     />
   ),
   ol: (props: React.HTMLAttributes<HTMLOListElement>) => (
     <ol
-      className="mb-4 list-decimal pl-[8%] pr-[15%] text-[1.75rem] leading-[1.4] text-[var(--color-secondary)] dark:text-[var(--color-secondary-light)] max-lg:pr-[5%] max-lg:text-[1.5rem]"
+      className="mb-4 max-w-[1400px] list-decimal pl-[8%] pr-[5%] text-[1.75rem] leading-[1.4] text-[var(--color-secondary)] dark:text-[var(--color-secondary-light)] max-lg:text-[1.5rem]"
       {...props}
     />
   ),
@@ -56,6 +56,11 @@ const components = {
     />
   ),
   Spacer: () => <div className="h-16" />,
+  Note: ({ children }: { children: React.ReactNode }) => (
+    <div className="ml-[5%] mb-12 max-w-[1350px] border-l-[5px] border-[var(--color-primary)] bg-[rgba(77,0,255,0.06)] py-4 pl-6 pr-6 text-[1.5rem] leading-[1.5] text-[var(--color-secondary)] dark:border-[var(--color-accent)] dark:bg-[rgba(255,200,0,0.06)] dark:text-[var(--color-secondary-light)] [&_p]:m-0 [&_p]:max-w-none [&_p]:p-0 [&_p]:pl-0 [&_p]:pr-0 [&_p]:text-[1.5rem]">
+      {children}
+    </div>
+  ),
   Button: ({
     href,
     children,

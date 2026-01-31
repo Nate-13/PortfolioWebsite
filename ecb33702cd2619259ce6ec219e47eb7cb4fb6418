@@ -1,0 +1,31 @@
+src/components/home/AboutSection.tsx
+  0894e2124d52b7d4 62,66
+src/components/home/ContactSection.tsx
+  0894e2124d52b7d4 25
+src/components/layout/Navigation.tsx
+  0894e2124d52b7d4 3-4,7-9,13-15,21-28
+src/components/layout/MobileMenu.tsx
+  0894e2124d52b7d4 3,8-10,15-16,24-31
+src/components/home/SectionTitle.tsx
+  0894e2124d52b7d4 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "ecb33702cd2619259ce6ec219e47eb7cb4fb6418",
+  "prompts": {
+    "0894e2124d52b7d4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "84c67bc5-a386-4f0a-a2df-5ec6922fcae4",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Nate-13 <149812512+Nate-13@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 88,
+      "total_deletions": 40,
+      "accepted_lines": 69,
+      "overriden_lines": 0
+    }
+  }
+}

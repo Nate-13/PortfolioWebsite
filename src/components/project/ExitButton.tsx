@@ -80,7 +80,7 @@ export default function ExitButton() {
   return (
     <button
       onClick={handleClick}
-      className="fixed right-[2vw] top-[2vw] z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border-none bg-[var(--color-primary)] text-white shadow-lg transition-all duration-200 hover:scale-110 hover:bg-[var(--color-accent)] hover:text-[var(--color-secondary)] dark:bg-[var(--color-accent)] dark:text-[var(--color-bg-dark)] dark:hover:bg-[var(--color-sun-dark)]"
+      className="fixed right-[2vw] top-[2vw] z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border-none bg-[var(--color-primary)] text-white shadow-lg transition-all duration-200 hover:scale-110 hover:bg-[var(--color-accent)] hover:text-[var(--color-secondary)] dark:bg-[var(--color-accent)] dark:text-[var(--color-bg-dark)] dark:hover:bg-white dark:hover:text-[var(--color-bg-dark)]"
       aria-label="Return to projects"
       type="button"
     >

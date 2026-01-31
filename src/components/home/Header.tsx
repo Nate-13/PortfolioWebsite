@@ -17,7 +17,7 @@ export default function Header() {
         id="sun"
         aria-hidden="true"
         style={{ opacity: mounted ? 1 : 0 }}
-        className="sun pointer-events-none absolute right-[13vw] top-[10vw] z-[-1] h-[var(--sun-size)] w-[var(--sun-size)] animate-grow rounded-full bg-[var(--color-sun)] blur-[var(--sun-blur)] transition-[background-color,opacity] duration-500 dark:bg-[var(--color-sun-dark)] max-[1000px]:right-[15vw] max-[1000px]:top-[75vw] max-[1000px]:h-[70vw] max-[1000px]:w-[70vw] max-[1000px]:animate-shift"
+        className="sun pointer-events-none absolute right-[13vw] top-[10vw] z-[-1] h-[var(--sun-size)] w-[var(--sun-size)] animate-grow rounded-full bg-[var(--color-sun)] blur-[var(--sun-blur)] transition-[background-color,opacity] duration-500 dark:bg-[var(--color-sun-dark)] max-[1000px]:right-[15vw] max-[1000px]:top-[75vw] max-[1000px]:h-[70vw] max-[1000px]:w-[70vw]"
       />
 
       {/* Name box */}

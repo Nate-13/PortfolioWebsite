@@ -266,6 +266,13 @@ html:not(.dark) body {
   animation: shift 40s infinite forwards;
 }
 
+/* Sun animation on mobile */
+@media (max-width: 1000px) {
+  #sun {
+    animation: shift 40s infinite forwards !important;
+  }
+}
+
 /* Media Queries */
 @media (max-width: 1250px) {
   html {

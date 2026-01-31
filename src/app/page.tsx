@@ -13,6 +13,7 @@ const featuredProjects = [
   {
     slug: "aperture",
     title: "APERTURE",
+    date: "June 2025",
     description: "AI-powered resume optimization app for developers.",
     thumbnail: "/projects/aperture/aperture-demo-video.mp4",
     thumbnailType: "video" as const,
@@ -20,6 +21,7 @@ const featuredProjects = [
   {
     slug: "hue-muse",
     title: "HUE MUSE",
+    date: "December 2024",
     description:
       "An interactive color inspiration tool using React, JavaScript, HTML, and CSS.",
     thumbnail: "/projects/hue-muse/Hue-Muse-Cover.png",
@@ -28,6 +30,7 @@ const featuredProjects = [
   {
     slug: "mbta",
     title: "MBTA APP CONCEPT",
+    date: "March 2024",
     description:
       "Bringing accessibility and simplicity to Boston's underground transit system.",
     thumbnail: "/projects/mbta/mbta-video.mp4",
@@ -36,6 +39,7 @@ const featuredProjects = [
   {
     slug: "seam-carving",
     title: "SEAM CARVING",
+    date: "April 2024",
     description:
       "Exploring a seam-carving algorithm to intelligently compress images while preserving subjects.",
     thumbnail: "/projects/seam-carving/png-compression.mp4",
@@ -44,6 +48,7 @@ const featuredProjects = [
   {
     slug: "portfolio",
     title: "PORTFOLIO WEBSITE",
+    date: "August 2024",
     description:
       "Making this website from scratch with HTML, CSS, and Javascript!",
     thumbnail: "/media/website-mockup.png",
@@ -52,6 +57,7 @@ const featuredProjects = [
   {
     slug: "gallery",
     title: "THE GALLERY",
+    date: "Ongoing",
     description:
       "A collection of my design and art works, created with various mediums, and inspired by a range of experiences.",
     thumbnail: "/media/gallery-thumbnail.png",

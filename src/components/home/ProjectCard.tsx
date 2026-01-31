@@ -11,6 +11,7 @@ import {
 interface ProjectCardProps {
   slug: string;
   title: string;
+  date: string;
   description: string;
   thumbnail: string;
   thumbnailType: "image" | "video";
@@ -19,6 +20,7 @@ interface ProjectCardProps {
 export default function ProjectCard({
   slug,
   title,
+  date,
   description,
   thumbnail,
   thumbnailType,
@@ -89,12 +91,21 @@ export default function ProjectCard({
             />
           )}
         </div>
-        <h2 className="absolute bottom-0 left-8 right-8 m-0 w-fit max-w-[calc(100%-4rem)] translate-y-1/2 rounded-[var(--container-radius)] border border-[var(--color-border-light)] bg-[rgba(248,248,248,0.82)] px-5 py-3 text-[length:var(--project-desc-size)] font-normal not-italic text-[var(--color-secondary)] shadow-[0_0_10px_0_rgba(0,0,0,0.1)] backdrop-blur-[8px] dark:border-[rgba(243,238,255,0.08)] dark:bg-[rgba(30,6,64,0.82)] dark:text-[var(--color-secondary-light)] dark:shadow-[0_4px_12px_0_rgba(0,0,0,0.5)]">
+        <h2 className="absolute bottom-0 left-8 m-0 w-fit max-w-[calc(100%-4rem)] translate-y-1/2 rounded-[var(--container-radius)] border border-[var(--color-border-light)] bg-[rgba(248,248,248,0.82)] px-5 py-3 text-[length:var(--project-desc-size)] font-normal not-italic text-[var(--color-secondary)] shadow-[0_0_10px_0_rgba(0,0,0,0.1)] backdrop-blur-[8px] dark:border-[rgba(243,238,255,0.08)] dark:bg-[rgba(30,6,64,0.82)] dark:text-[var(--color-secondary-light)] dark:shadow-[0_4px_12px_0_rgba(0,0,0,0.5)]">
           <span className="font-bold text-[var(--color-primary)] dark:text-[var(--color-accent)]">
-            {title}:
-          </span>{" "}
+            {title}
+          </span>
+          <span className="hidden max-lg:inline">
+            <span className="mx-2 opacity-50">|</span>
+            <span className="opacity-70">{date}</span>
+            <br />
+          </span>
+          <span className="max-lg:hidden">: </span>
           {description}
         </h2>
+        <span className="absolute bottom-0 right-8 translate-y-1/2 rounded-[var(--container-radius)] border border-[var(--color-border-light)] bg-[rgba(248,248,248,0.82)] px-4 py-2 text-[length:var(--project-desc-size)] text-[var(--color-secondary)] shadow-[0_0_10px_0_rgba(0,0,0,0.1)] backdrop-blur-[8px] max-lg:hidden dark:border-[rgba(243,238,255,0.08)] dark:bg-[rgba(30,6,64,0.82)] dark:text-[var(--color-secondary-light)] dark:shadow-[0_4px_12px_0_rgba(0,0,0,0.5)]">
+          {date}
+        </span>
       </div>
     </div>
   );

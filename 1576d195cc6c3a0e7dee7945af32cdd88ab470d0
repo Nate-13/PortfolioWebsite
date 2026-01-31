@@ -1,0 +1,25 @@
+src/content/projects/portfolio.mdx
+  0894e2124d52b7d4 15-18
+src/components/project/ProjectContent.tsx
+  0894e2124d52b7d4 23,29,35,59-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "1576d195cc6c3a0e7dee7945af32cdd88ab470d0",
+  "prompts": {
+    "0894e2124d52b7d4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "84c67bc5-a386-4f0a-a2df-5ec6922fcae4",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Nate-13 <149812512+Nate-13@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 29,
+      "total_deletions": 20,
+      "accepted_lines": 12,
+      "overriden_lines": 0
+    }
+  }
+}

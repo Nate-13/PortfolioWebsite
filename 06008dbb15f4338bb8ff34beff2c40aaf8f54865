@@ -1,0 +1,23 @@
+src/app/gallery/gallery.css
+  616608b6797d37be 203
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.42",
+  "base_commit_sha": "06008dbb15f4338bb8ff34beff2c40aaf8f54865",
+  "prompts": {
+    "616608b6797d37be": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "03796b21-4d3e-4195-bab7-048e548a93be",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Nate-13 <149812512+Nate-13@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}

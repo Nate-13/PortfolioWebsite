@@ -1,0 +1,3 @@
+[submodule "HueMuse"]
+	path = HueMuse
+	url = https://github.com/Nate-13/HueMuse.git
